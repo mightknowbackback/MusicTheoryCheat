@@ -15,6 +15,7 @@
 		960DE56B2523E84C003C724F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960DE5692523E84C003C724F /* LaunchScreen.storyboard */; };
 		960DE5762523E84C003C724F /* Theory_WheelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5752523E84C003C724F /* Theory_WheelTests.swift */; };
 		960DE5812523E84C003C724F /* Theory_WheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* Theory_WheelUITests.swift */; };
+		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		960DE57C2523E84C003C724F /* Theory WheelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theory WheelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960DE5802523E84C003C724F /* Theory_WheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory_WheelUITests.swift; sourceTree = "<group>"; };
 		960DE5822523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960DE5922523E878003C724F /* Functionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionality.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				960DE55E2523E84A003C724F /* AppDelegate.swift */,
 				960DE5602523E84A003C724F /* SceneDelegate.swift */,
 				960DE5622523E84A003C724F /* ContentView.swift */,
+				960DE5912523E864003C724F /* Notes */,
 				960DE5642523E84C003C724F /* Assets.xcassets */,
 				960DE5692523E84C003C724F /* LaunchScreen.storyboard */,
 				960DE56C2523E84C003C724F /* Info.plist */,
@@ -134,6 +137,14 @@
 				960DE5822523E84C003C724F /* Info.plist */,
 			);
 			path = "Theory WheelUITests";
+			sourceTree = "<group>";
+		};
+		960DE5912523E864003C724F /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				960DE5922523E878003C724F /* Functionality.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
+				960DE5932523E878003C724F /* Functionality.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
