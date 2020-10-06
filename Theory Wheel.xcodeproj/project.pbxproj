@@ -18,8 +18,8 @@
 		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
 		966B8671252CE89B0026431C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8670252CE89B0026431C /* Constants.swift */; };
 		966B8679252CEBAC0026431C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* Enums.swift */; };
-		966B867D252D03B60026431C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* Enums.swift */; };
-		966B8681252D03BE0026431C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8670252CE89B0026431C /* Constants.swift */; };
+		966B8686252D11DA0026431C /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8685252D11DA0026431C /* Key.swift */; };
+		966B8693252D1BB20026431C /* UserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* UserOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +57,8 @@
 		960DE5922523E878003C724F /* Functionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionality.swift; sourceTree = "<group>"; };
 		966B8670252CE89B0026431C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
 		966B8678252CEBAC0026431C /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		966B8685252D11DA0026431C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		966B8692252D1BB20026431C /* UserOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,8 @@
 			children = (
 				966B8670252CE89B0026431C /* Constants.swift */,
 				966B8678252CEBAC0026431C /* Enums.swift */,
+				966B8685252D11DA0026431C /* Key.swift */,
+				966B8692252D1BB20026431C /* UserOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,12 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966B8686252D11DA0026431C /* Key.swift in Sources */,
 				966B8671252CE89B0026431C /* Constants.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
 				966B8679252CEBAC0026431C /* Enums.swift in Sources */,
 				960DE5932523E878003C724F /* Functionality.swift in Sources */,
+				966B8693252D1BB20026431C /* UserOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966B867D252D03B60026431C /* Enums.swift in Sources */,
 				960DE5762523E84C003C724F /* Theory_WheelTests.swift in Sources */,
-				966B8681252D03BE0026431C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

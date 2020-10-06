@@ -65,7 +65,7 @@ import Foundation
  OPTIONS:
  
  Toggle which is on top (and starting order) between Major/minor
- How far to extend chords (triads, 7th, 9th)
+ ?? How far to extend chords (triads, 7th, 9th)
  Key selection method (by accidentals, by key name)
  Symbol type (classical, Nashville Numbers, etc)
  Change color scheme?

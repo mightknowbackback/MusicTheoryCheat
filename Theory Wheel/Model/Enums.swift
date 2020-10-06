@@ -10,7 +10,9 @@ import Foundation
 enum PitchClass : Int {
     
     case c = 0, dFlat = 1, d = 2, eFlat = 3, e = 4, f = 5, gFlat = 6, g = 7, aFlat = 8, a = 9, bFlat = 10, b = 11
+    
     static let all : [PitchClass] = [.c, .dFlat, .d, .eFlat, .e, .f, .gFlat, .g, .aFlat, .a, .bFlat, .b]
+    
     static func pitchClass(for num: Int) -> PitchClass {
         var i = num
         switch num {
@@ -27,11 +29,13 @@ enum PitchClass : Int {
         }
         return Self.all[i]
     }
+    
     func pitchClassFor(_ halfSteps: Int, stepsInDirection direction: PitchDirection) -> PitchClass {
         let op : (Int, Int) -> Int = direction == .up ? (+) : (-)
         let newNum = op(self.rawValue, halfSteps)
         return PitchClass.pitchClass(for: newNum)
     }
+    
     func stringLiteral(inKey key: PitchClass? = nil, withKeySpelling spelling: KeySpelling = .flats) -> String {
         var noteName : String = ""
         let accidental : String = spelling == .flats ? flatSymbol : sharpSymbol
@@ -78,6 +82,13 @@ enum PitchClass : Int {
         return result
     }
     
+}
+
+enum Tonality : String {
+    case major = "Major", minor = "minor"
+    var scale : [Int] {
+        return self == .major ? majorScaleIntervals : minorScaleIntervals
+    }
 }
 
 enum PitchDirection {

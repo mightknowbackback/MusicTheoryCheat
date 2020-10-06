@@ -10,3 +10,5 @@ import Foundation
 let flatSymbol : String = "♭"
 let naturalSymbol : String = "♮"
 let sharpSymbol : String = "♯"
+let majorScaleIntervals : [Int] = [0, 2, 4, 5, 7, 9, 11]
+let minorScaleIntervals : [Int] = [0, 2, 3, 5, 7, 8, 10]

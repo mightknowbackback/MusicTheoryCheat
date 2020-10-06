@@ -34,6 +34,14 @@ class Theory_WheelTests: XCTestCase {
         XCTAssertEqual(fSharp.stringLiteral(withKeySpelling: .flats), gFlatString)
         
     }
+    
+    func testKey() {
+        
+        let gFlatMajor : Key = Key(keyCenter: .gFlat, tonality: .major)
+        let gFlatMajorScale : [PitchClass] = [.gFlat, .aFlat, .bFlat, .b, .dFlat, .eFlat, .f]
+        let testScale : [PitchClass] = gFlatMajor.scale
+        XCTAssertEqual(testScale, gFlatMajorScale)
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
