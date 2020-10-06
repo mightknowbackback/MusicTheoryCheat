@@ -16,6 +16,8 @@
 		960DE5762523E84C003C724F /* Theory_WheelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5752523E84C003C724F /* Theory_WheelTests.swift */; };
 		960DE5812523E84C003C724F /* Theory_WheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* Theory_WheelUITests.swift */; };
 		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
+		966B8671252CE89B0026431C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8670252CE89B0026431C /* Constants.swift */; };
+		966B8679252CEBAC0026431C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		960DE5802523E84C003C724F /* Theory_WheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory_WheelUITests.swift; sourceTree = "<group>"; };
 		960DE5822523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960DE5922523E878003C724F /* Functionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionality.swift; sourceTree = "<group>"; };
+		966B8670252CE89B0026431C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
+		966B8678252CEBAC0026431C /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 			children = (
 				960DE55E2523E84A003C724F /* AppDelegate.swift */,
 				960DE5602523E84A003C724F /* SceneDelegate.swift */,
-				960DE5622523E84A003C724F /* ContentView.swift */,
+				966B866D252CE8230026431C /* Model */,
+				966B866E252CE82C0026431C /* ModelView */,
+				966B866F252CE8360026431C /* View */,
 				960DE5912523E864003C724F /* Notes */,
 				960DE5642523E84C003C724F /* Assets.xcassets */,
 				960DE5692523E84C003C724F /* LaunchScreen.storyboard */,
@@ -145,6 +151,30 @@
 				960DE5922523E878003C724F /* Functionality.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		966B866D252CE8230026431C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				966B8670252CE89B0026431C /* Constants.swift */,
+				966B8678252CEBAC0026431C /* Enums.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		966B866E252CE82C0026431C /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		966B866F252CE8360026431C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				960DE5622523E84A003C724F /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966B8671252CE89B0026431C /* Constants.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
+				966B8679252CEBAC0026431C /* Enums.swift in Sources */,
 				960DE5932523E878003C724F /* Functionality.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
