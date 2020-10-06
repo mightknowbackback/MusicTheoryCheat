@@ -23,15 +23,28 @@ import Foundation
  
  INFO TO DISPLAY:
  
- Key Center Major
- Key Center Minor
- Adjacent Key centers for both
- All 7 Notes of scale
- Chord quality based on 7 notes, with notes that make chord
- Symbol for chord of each scale degree (Major and minor)
- Key signature (number of sharps or flats)
- Lines connecting key center to keys that highlights I, IV, V (and subhighlights ii in Major?, bVI in minor?)
- Include labeling for Harmonic Minor V chord?
+ MAIN:
+ Toggle Info Mode? (show info)
+ To Options Screen
+ // Key Center Major
+ // Key Center Minor
+ // Adjacent Key centers for both
+ // Key signature (number of sharps or flats)
+ // Chord quality based on 7 notes
+ // All 7 Notes of scale
+ // Note Names that make chord that make chord
+ // Symbol for chord of each scale degree (Major and minor)
+ ?? Lines connecting key center to keys that highlights I, IV, V (and subhighlights ii in Major?, bVI in minor?)
+ ?? Include labeling for Harmonic Minor V chord?
+ 
+ OPTIONS:
+ All Options with controls to change
+ Display App Info popover
+ 
+ APP INFO:
+ Copyright
+ Other Apps
+ Website
  
  */
 
@@ -41,8 +54,9 @@ import Foundation
  
  Launch Screen
  Onboarding (Launch Screen with forced acknowledgement)
- Main
- Options
+ Main (to Options, Toggle Info Mode)
+ Options (to Main, to Info)
+ Info (Popover, link to other apps)
  
  */
 
@@ -52,7 +66,7 @@ import Foundation
  
  Toggle which is on top (and starting order) between Major/minor
  How far to extend chords (triads, 7th, 9th)
- Key select wheel moves in 1/2 steps or circle of 4ths
+ Key selection method (by accidentals, by key name)
  Symbol type (classical, Nashville Numbers, etc)
  Change color scheme?
  
