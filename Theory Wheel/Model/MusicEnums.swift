@@ -1,5 +1,5 @@
 //
-//  Enums.swift
+//  MusicEnums.swift
 //  Theory Wheel
 //
 //  Created by mightknow on 10/6/20.
@@ -98,4 +98,5 @@ enum PitchDirection {
 
 enum KeySpelling {
     case flats, sharps
+    static var all : [KeySpelling] = [.flats, .sharps]
 }

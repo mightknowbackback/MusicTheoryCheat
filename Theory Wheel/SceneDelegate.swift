@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let optionsModel = UserOptions()
-        let mainViewModel = MainViewModel(optionsModel.model)
+        let optionsModel = OptionsViewModel()
+        let mainViewModel = MainViewModel(optionsModel)
         let contentView = ContentView().environmentObject(optionsModel).environmentObject(mainViewModel)
 
         // Use a UIHostingController as window root view controller.

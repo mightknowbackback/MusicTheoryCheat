@@ -17,12 +17,14 @@
 		960DE5812523E84C003C724F /* Theory_WheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* Theory_WheelUITests.swift */; };
 		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
 		966B8671252CE89B0026431C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8670252CE89B0026431C /* Constants.swift */; };
-		966B8679252CEBAC0026431C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* Enums.swift */; };
+		966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* MusicEnums.swift */; };
 		966B8686252D11DA0026431C /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8685252D11DA0026431C /* Key.swift */; };
-		966B8693252D1BB20026431C /* UserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* UserOptions.swift */; };
 		966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86B0252D2A2A0026431C /* OptionsView.swift */; };
 		966B86BC252D2EBC0026431C /* OptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86BB252D2EBC0026431C /* OptionsModel.swift */; };
 		966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86C9252D3DAD0026431C /* MainViewModel.swift */; };
+		966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86D6252D55F70026431C /* KeyPickerView.swift */; };
+		966B86E4252D5D390026431C /* OptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* OptionsViewModel.swift */; };
+		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +61,14 @@
 		960DE5822523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960DE5922523E878003C724F /* Functionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionality.swift; sourceTree = "<group>"; };
 		966B8670252CE89B0026431C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
-		966B8678252CEBAC0026431C /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		966B8678252CEBAC0026431C /* MusicEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEnums.swift; sourceTree = "<group>"; };
 		966B8685252D11DA0026431C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		966B8692252D1BB20026431C /* UserOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptions.swift; sourceTree = "<group>"; };
+		966B8692252D1BB20026431C /* OptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewModel.swift; sourceTree = "<group>"; };
 		966B86B0252D2A2A0026431C /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		966B86BB252D2EBC0026431C /* OptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsModel.swift; sourceTree = "<group>"; };
 		966B86C9252D3DAD0026431C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
+		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				966B8670252CE89B0026431C /* Constants.swift */,
-				966B8678252CEBAC0026431C /* Enums.swift */,
+				966B8678252CEBAC0026431C /* MusicEnums.swift */,
 				966B8685252D11DA0026431C /* Key.swift */,
 				966B86BB252D2EBC0026431C /* OptionsModel.swift */,
 			);
@@ -204,7 +208,7 @@
 		966B86A5252D288B0026431C /* OptionsViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				966B8692252D1BB20026431C /* UserOptions.swift */,
+				966B8692252D1BB20026431C /* OptionsViewModel.swift */,
 			);
 			path = OptionsViewModel;
 			sourceTree = "<group>";
@@ -212,6 +216,8 @@
 		966B86AE252D2A020026431C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				966B86EB252D73260026431C /* MainView.swift */,
+				966B86D6252D55F70026431C /* KeyPickerView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -355,15 +361,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				966B86BC252D2EBC0026431C /* OptionsModel.swift in Sources */,
+				966B86EC252D73260026431C /* MainView.swift in Sources */,
+				966B86E4252D5D390026431C /* OptionsViewModel.swift in Sources */,
 				966B8686252D11DA0026431C /* Key.swift in Sources */,
 				966B8671252CE89B0026431C /* Constants.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
-				966B8679252CEBAC0026431C /* Enums.swift in Sources */,
+				966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */,
+				966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */,
 				960DE5932523E878003C724F /* Functionality.swift in Sources */,
-				966B8693252D1BB20026431C /* UserOptions.swift in Sources */,
 				966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,13 @@ struct Key {
     var keyCenter : PitchClass
     var tonality : Tonality
     
+    //TODO: Fix this!!!
+    func name(withSpelling spelling: KeySpelling = .flats) -> String {
+        let noteString = self.keyCenter.stringLiteral(withKeySpelling: spelling)
+        let tonalityString = self.tonality.rawValue
+        return noteString + tonalityString
+    }
+    
     var scale : [PitchClass] {
         var array : [PitchClass] = []
         for i in self.tonality.scale {
@@ -22,7 +29,7 @@ struct Key {
     
     var relativeKey : Key {
         let tonality : Tonality = self.tonality == .major ? .major : .minor
-        let direction : PitchDirection = self.tonality == .major ? .down : .up
+        let direction : PitchDirection = self.tonality == .major ? .up : .down
         let keyCenter = self.keyCenter.pitchClassFor(3, stepsInDirection: direction)
         return Key(keyCenter: keyCenter, tonality: tonality)
     }
@@ -43,7 +50,6 @@ struct Key {
         default:
             break
         }
-        
         return result
     }
     
