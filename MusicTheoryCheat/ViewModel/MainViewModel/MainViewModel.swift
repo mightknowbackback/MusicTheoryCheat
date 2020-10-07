@@ -87,4 +87,3 @@ class MainViewModel : ObservableObject {
         print("Key is \(self.options.model.currentKey.name(withSpelling: KeySpelling.all[self.options.model.preferredSpellingIndex]))")
     }
 }
-//
