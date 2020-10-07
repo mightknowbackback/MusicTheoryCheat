@@ -89,6 +89,7 @@ enum Tonality : String {
     var scale : [Int] {
         return self == .major ? majorScaleIntervals : minorScaleIntervals
     }
+    static var all : [Tonality] = [.major, .minor]
 }
 
 enum PitchDirection {
