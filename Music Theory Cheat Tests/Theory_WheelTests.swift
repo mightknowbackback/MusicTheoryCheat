@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Theory_Wheel
+@testable import Music_Theory_Cheat
 
 class Theory_WheelTests: XCTestCase {
     

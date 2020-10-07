@@ -14,7 +14,7 @@
 		960DE5682523E84C003C724F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960DE5672523E84C003C724F /* Preview Assets.xcassets */; };
 		960DE56B2523E84C003C724F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960DE5692523E84C003C724F /* LaunchScreen.storyboard */; };
 		960DE5762523E84C003C724F /* Theory_WheelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5752523E84C003C724F /* Theory_WheelTests.swift */; };
-		960DE5812523E84C003C724F /* Theory_WheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* Theory_WheelUITests.swift */; };
+		960DE5812523E84C003C724F /* Music_Theory_CheatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* Music_Theory_CheatUITests.swift */; };
 		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
 		966B8671252CE89B0026431C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8670252CE89B0026431C /* Constants.swift */; };
 		966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* MusicEnums.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		960DE55B2523E84A003C724F /* Theory Wheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theory Wheel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960DE55B2523E84A003C724F /* Music Theory Cheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Theory Cheat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960DE55E2523E84A003C724F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960DE5602523E84A003C724F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		960DE5622523E84A003C724F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,11 +53,11 @@
 		960DE5672523E84C003C724F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		960DE56A2523E84C003C724F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		960DE56C2523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		960DE5712523E84C003C724F /* Theory WheelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theory WheelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960DE5712523E84C003C724F /* Music Theory CheatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Theory CheatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960DE5752523E84C003C724F /* Theory_WheelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory_WheelTests.swift; sourceTree = "<group>"; };
 		960DE5772523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		960DE57C2523E84C003C724F /* Theory WheelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Theory WheelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		960DE5802523E84C003C724F /* Theory_WheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory_WheelUITests.swift; sourceTree = "<group>"; };
+		960DE57C2523E84C003C724F /* Music Theory CheatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music Theory CheatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960DE5802523E84C003C724F /* Music_Theory_CheatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_Theory_CheatUITests.swift; sourceTree = "<group>"; };
 		960DE5822523E84C003C724F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960DE5922523E878003C724F /* Functionality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functionality.swift; sourceTree = "<group>"; };
 		966B8670252CE89B0026431C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = SOURCE_ROOT; };
@@ -99,8 +99,8 @@
 		960DE5522523E849003C724F = {
 			isa = PBXGroup;
 			children = (
-				960DE55D2523E84A003C724F /* Theory Wheel */,
-				960DE5742523E84C003C724F /* Theory WheelTests */,
+				960DE55D2523E84A003C724F /* Music Theory Cheat */,
+				960DE5742523E84C003C724F /* Music Theory Cheat Tests */,
 				960DE57F2523E84C003C724F /* Theory WheelUITests */,
 				960DE55C2523E84A003C724F /* Products */,
 			);
@@ -109,14 +109,14 @@
 		960DE55C2523E84A003C724F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				960DE55B2523E84A003C724F /* Theory Wheel.app */,
-				960DE5712523E84C003C724F /* Theory WheelTests.xctest */,
-				960DE57C2523E84C003C724F /* Theory WheelUITests.xctest */,
+				960DE55B2523E84A003C724F /* Music Theory Cheat.app */,
+				960DE5712523E84C003C724F /* Music Theory CheatTests.xctest */,
+				960DE57C2523E84C003C724F /* Music Theory CheatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		960DE55D2523E84A003C724F /* Theory Wheel */ = {
+		960DE55D2523E84A003C724F /* Music Theory Cheat */ = {
 			isa = PBXGroup;
 			children = (
 				960DE55E2523E84A003C724F /* AppDelegate.swift */,
@@ -130,7 +130,7 @@
 				960DE56C2523E84C003C724F /* Info.plist */,
 				960DE5662523E84C003C724F /* Preview Content */,
 			);
-			path = "Theory Wheel";
+			path = "Music Theory Cheat";
 			sourceTree = "<group>";
 		};
 		960DE5662523E84C003C724F /* Preview Content */ = {
@@ -141,19 +141,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		960DE5742523E84C003C724F /* Theory WheelTests */ = {
+		960DE5742523E84C003C724F /* Music Theory Cheat Tests */ = {
 			isa = PBXGroup;
 			children = (
 				960DE5752523E84C003C724F /* Theory_WheelTests.swift */,
 				960DE5772523E84C003C724F /* Info.plist */,
 			);
-			path = "Theory WheelTests";
+			path = "Music Theory Cheat Tests";
 			sourceTree = "<group>";
 		};
 		960DE57F2523E84C003C724F /* Theory WheelUITests */ = {
 			isa = PBXGroup;
 			children = (
-				960DE5802523E84C003C724F /* Theory_WheelUITests.swift */,
+				960DE5802523E84C003C724F /* Music_Theory_CheatUITests.swift */,
 				960DE5822523E84C003C724F /* Info.plist */,
 			);
 			path = "Theory WheelUITests";
@@ -233,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		960DE55A2523E849003C724F /* Theory Wheel */ = {
+		960DE55A2523E849003C724F /* Music Theory Cheat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 960DE5852523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory Wheel" */;
+			buildConfigurationList = 960DE5852523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory Cheat" */;
 			buildPhases = (
 				960DE5572523E849003C724F /* Sources */,
 				960DE5582523E849003C724F /* Frameworks */,
@@ -245,14 +245,14 @@
 			);
 			dependencies = (
 			);
-			name = "Theory Wheel";
+			name = "Music Theory Cheat";
 			productName = "Theory Wheel";
-			productReference = 960DE55B2523E84A003C724F /* Theory Wheel.app */;
+			productReference = 960DE55B2523E84A003C724F /* Music Theory Cheat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		960DE5702523E84C003C724F /* Theory WheelTests */ = {
+		960DE5702523E84C003C724F /* Music Theory CheatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 960DE5882523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory WheelTests" */;
+			buildConfigurationList = 960DE5882523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory CheatTests" */;
 			buildPhases = (
 				960DE56D2523E84C003C724F /* Sources */,
 				960DE56E2523E84C003C724F /* Frameworks */,
@@ -263,14 +263,14 @@
 			dependencies = (
 				960DE5732523E84C003C724F /* PBXTargetDependency */,
 			);
-			name = "Theory WheelTests";
+			name = "Music Theory CheatTests";
 			productName = "Theory WheelTests";
-			productReference = 960DE5712523E84C003C724F /* Theory WheelTests.xctest */;
+			productReference = 960DE5712523E84C003C724F /* Music Theory CheatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		960DE57B2523E84C003C724F /* Theory WheelUITests */ = {
+		960DE57B2523E84C003C724F /* Music Theory CheatUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 960DE58B2523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory WheelUITests" */;
+			buildConfigurationList = 960DE58B2523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory CheatUITests" */;
 			buildPhases = (
 				960DE5782523E84C003C724F /* Sources */,
 				960DE5792523E84C003C724F /* Frameworks */,
@@ -281,9 +281,9 @@
 			dependencies = (
 				960DE57E2523E84C003C724F /* PBXTargetDependency */,
 			);
-			name = "Theory WheelUITests";
+			name = "Music Theory CheatUITests";
 			productName = "Theory WheelUITests";
-			productReference = 960DE57C2523E84C003C724F /* Theory WheelUITests.xctest */;
+			productReference = 960DE57C2523E84C003C724F /* Music Theory CheatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 960DE5562523E849003C724F /* Build configuration list for PBXProject "Theory Wheel" */;
+			buildConfigurationList = 960DE5562523E849003C724F /* Build configuration list for PBXProject "Music Theory Cheat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -321,9 +321,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				960DE55A2523E849003C724F /* Theory Wheel */,
-				960DE5702523E84C003C724F /* Theory WheelTests */,
-				960DE57B2523E84C003C724F /* Theory WheelUITests */,
+				960DE55A2523E849003C724F /* Music Theory Cheat */,
+				960DE5702523E84C003C724F /* Music Theory CheatTests */,
+				960DE57B2523E84C003C724F /* Music Theory CheatUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960DE5812523E84C003C724F /* Theory_WheelUITests.swift in Sources */,
+				960DE5812523E84C003C724F /* Music_Theory_CheatUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +397,12 @@
 /* Begin PBXTargetDependency section */
 		960DE5732523E84C003C724F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 960DE55A2523E849003C724F /* Theory Wheel */;
+			target = 960DE55A2523E849003C724F /* Music Theory Cheat */;
 			targetProxy = 960DE5722523E84C003C724F /* PBXContainerItemProxy */;
 		};
 		960DE57E2523E84C003C724F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 960DE55A2523E849003C724F /* Theory Wheel */;
+			target = 960DE55A2523E849003C724F /* Music Theory Cheat */;
 			targetProxy = 960DE57D2523E84C003C724F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -541,10 +541,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Theory Wheel/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Music Theory Cheat/Preview Content\"";
 				DEVELOPMENT_TEAM = 28A7JVTRXB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Theory Wheel/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Music Theory Cheat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,10 +562,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Theory Wheel/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Music Theory Cheat/Preview Content\"";
 				DEVELOPMENT_TEAM = 28A7JVTRXB;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Theory Wheel/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Music Theory Cheat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +595,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theory Wheel.app/Theory Wheel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Theory Cheat.app/Music Theory Cheat";
 			};
 			name = Debug;
 		};
@@ -617,7 +617,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Theory Wheel.app/Theory Wheel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Theory Cheat.app/Music Theory Cheat";
 			};
 			name = Release;
 		};
@@ -664,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		960DE5562523E849003C724F /* Build configuration list for PBXProject "Theory Wheel" */ = {
+		960DE5562523E849003C724F /* Build configuration list for PBXProject "Music Theory Cheat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				960DE5832523E84C003C724F /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		960DE5852523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory Wheel" */ = {
+		960DE5852523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory Cheat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				960DE5862523E84C003C724F /* Debug */,
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		960DE5882523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory WheelTests" */ = {
+		960DE5882523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory CheatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				960DE5892523E84C003C724F /* Debug */,
@@ -691,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		960DE58B2523E84C003C724F /* Build configuration list for PBXNativeTarget "Theory WheelUITests" */ = {
+		960DE58B2523E84C003C724F /* Build configuration list for PBXNativeTarget "Music Theory CheatUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				960DE58C2523E84C003C724F /* Debug */,
