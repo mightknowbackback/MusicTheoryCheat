@@ -1,6 +1,6 @@
 //
 //  MusicEnums.swift
-//  Theory Wheel
+//  MusicTheoryCheat
 //
 //  Created by mightknow on 10/6/20.
 //

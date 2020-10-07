@@ -1,6 +1,6 @@
 //
-//  Theory_WheelUITests.swift
-//  Theory WheelUITests
+//  MusicTheoryCheatUITests.swift
+//  MusicTheoryCheatUITests
 //
 //  Created by mightknow on 9/29/20.
 //

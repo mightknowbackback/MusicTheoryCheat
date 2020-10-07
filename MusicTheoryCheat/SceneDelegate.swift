@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Theory Wheel
+//  MusicTheoryCheat
 //
 //  Created by mightknow on 9/29/20.
 //

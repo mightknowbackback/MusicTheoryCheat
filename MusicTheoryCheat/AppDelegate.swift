@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Theory Wheel
+//  MusicTheoryCheat
 //
 //  Created by mightknow on 9/29/20.
 //
@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("App Launched!")
         return true
     }
 
