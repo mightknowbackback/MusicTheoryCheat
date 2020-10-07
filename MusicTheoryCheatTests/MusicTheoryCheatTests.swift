@@ -1,14 +1,14 @@
 //
-//  Theory_WheelTests.swift
-//  Theory WheelTests
+//  MusicTheoryCheatTests.swift
+//  MusicTheoryCheatTests
 //
 //  Created by mightknow on 9/29/20.
 //
 
 import XCTest
-@testable import Music_Theory_Cheat
+@testable import MusicTheoryCheat
 
-class Theory_WheelTests: XCTestCase {
+class MusicTheoryCheatTests: XCTestCase {
     
     func testPitchClassStringLiterals() {
         
