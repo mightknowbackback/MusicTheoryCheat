@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @EnvironmentObject var optionsViewModel : ViewModel
-    @EnvironmentObject var mainViewModel : MainViewModel
+    @EnvironmentObject var viewModel : ViewModel
     
     var body: some View {
         NavigationView {
@@ -19,7 +18,7 @@ struct MainView: View {
                     Text("Options")
                 }
                 KeyPickerView()
-                Text(self.optionsViewModel.model.currentKey.name)
+                Text(self.viewModel.model.currentKey.name)
             }.navigationBarHidden(true)
         }
     }

@@ -9,13 +9,12 @@ import SwiftUI
 
 struct KeyPickerView: View {
     
-    @EnvironmentObject var optionsViewModel : ViewModel
-    @EnvironmentObject var mainViewModel : MainViewModel
+    @EnvironmentObject var viewModel : ViewModel
     
     var body: some View {
-        Picker("", selection: self.mainViewModel.keyBinding) {
-            ForEach(0..<self.mainViewModel.pickerStrings.count) {i in
-                Text(self.mainViewModel.pickerStrings[i])
+        Picker("", selection: self.viewModel.keyBinding) {
+            ForEach(0..<self.viewModel.pickerStrings.count) {i in
+                Text(self.viewModel.pickerStrings[i])
             }
         }.pickerStyle(SegmentedPickerStyle())
     }

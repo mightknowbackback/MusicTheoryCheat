@@ -17,45 +17,43 @@ struct Key : Equatable {
         return rhs.keyCenter == lhs.keyCenter && rhs.tonality == lhs.tonality
     }
     
-    var name : String {
-        var noteString : String {
-            var str = ""
-            func spellWithSharps() {
-                str = self.keyCenter.stringLiteral(withKeySpelling: .sharps)
-            }
-            func spellWithFlats() {
-                str = self.keyCenter.stringLiteral()
-            }
-            if self.tonality == .major {
-                switch self.keyCenter {
-                case .gFlat:
-                    if self.preferSharpSpelling {
-                        spellWithSharps()
-                    } else {
-                        fallthrough
-                    }
-                default:
-                    spellWithFlats()
-                }
-            } else {
-                switch self.keyCenter {
-                case .aFlat, .dFlat, .gFlat:
-                    spellWithSharps()
-                case .eFlat:
-                    if self.preferSharpSpelling {
-                        spellWithSharps()
-                    } else {
-                        fallthrough
-                    }
-                default:
-                    spellWithFlats()
-                }
-            }
-            return str
+    var noteString : String {
+        var str = ""
+        func spellWithSharps() {
+            str = self.keyCenter.stringLiteral(withKeySpelling: .sharps)
         }
-        let tonalityString = self.tonality.rawValue
-        return noteString + tonalityString
+        func spellWithFlats() {
+            str = self.keyCenter.stringLiteral()
+        }
+        if self.tonality == .major {
+            switch self.keyCenter {
+            case .gFlat:
+                if self.preferSharpSpelling {
+                    spellWithSharps()
+                } else {
+                    fallthrough
+                }
+            default:
+                spellWithFlats()
+            }
+        } else {
+            switch self.keyCenter {
+            case .aFlat, .dFlat, .gFlat:
+                spellWithSharps()
+            case .eFlat:
+                if self.preferSharpSpelling {
+                    spellWithSharps()
+                } else {
+                    fallthrough
+                }
+            default:
+                spellWithFlats()
+            }
+        }
+        return str
     }
+    private var tonalityString : String {self.tonality.rawValue}
+    var name : String {self.noteString + self.tonalityString}
     
     var scale : [PitchClass] {
         var array : [PitchClass] = []
