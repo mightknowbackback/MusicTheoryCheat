@@ -41,7 +41,6 @@ struct OptionsView: View {
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
-            KeyPickerView()
         }
     }
 }
