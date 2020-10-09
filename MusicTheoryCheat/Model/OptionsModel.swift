@@ -37,7 +37,7 @@ struct OptionsModel : Codable {
     }
     var currentKeyIndex : Int = 0
     var currentKey : Key {
-        var key = Key(keyCenter: PitchClass.pitchClass(for: self.currentKeyIndex), tonality: self.featuredTonality)
+        var key = Key(keyCenter: PitchClass.pitchClassBy(noteNumber: self.currentKeyIndex), tonality: self.featuredTonality)
         if self.preferredSpelling == .sharps {
             key.preferSharpSpelling = true
         }
