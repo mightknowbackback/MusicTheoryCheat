@@ -13,13 +13,50 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
+            
             VStack {
+                
                 NavigationLink(destination: OptionsView()) {
                     Text("Options")
                 }
+                Spacer()
                 KeyPickerView()
-                Text(self.viewModel.primaryKeyName)
-            }.navigationBarHidden(true)
+                Spacer()
+                HStack {
+                    Text(self.viewModel.primaryNearKeyFlatLabelString).font(.subheadline)
+                    Spacer()
+                    Text(self.viewModel.primaryKeyLabelString).font(.headline)
+                    Spacer()
+                    Text(self.viewModel.primaryNearKeySharpLabelString).font(.subheadline)
+                }.padding()
+                Spacer()
+                VStack {
+                    ForEach(0..<self.viewModel.featuredKeyScaleDegreeStrings.count) {i in
+                        HStack {
+                            Text(self.viewModel.featuredKeyScaleDegreeStrings[i]).font(.headline)
+                            Spacer()
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[0])
+                            Spacer()
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[1])
+                            Spacer()
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[2])
+                            Spacer()
+                            Text(self.viewModel.relativeKeyScaleDegreeStrings[i]).font(.headline)
+                        }.padding()
+                    }
+                }.padding()
+                Spacer()
+                HStack {
+                    Text(self.viewModel.relativeNearKeyFlatLabelString).font(.subheadline)
+                    Spacer()
+                    Text(self.viewModel.relativeKeyLabelString).font(.headline)
+                    Spacer()
+                    Text(self.viewModel.relativeNearKeySharpLabelString).font(.subheadline)
+                }.padding()
+                Spacer()
+            }
+            .navigationBarHidden(true)
+            .padding()
         }
     }
 }

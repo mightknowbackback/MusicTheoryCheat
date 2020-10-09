@@ -106,7 +106,7 @@ struct Key : Equatable {
     // Relative Major or minor (key with same accidentals)
     var relativeKey : Key {
         let tonality : Tonality = self.tonality == .major ? .major : .minor
-        let direction : PitchDirection = self.tonality == .major ? .up : .down
+        let direction : PitchDirection = self.tonality == .major ? .down : .up
         let keyCenter = self.keyCenter.pitchClassFor(3, stepsInDirection: direction)
         return Key(keyCenter: keyCenter, tonality: tonality)
     }

@@ -10,12 +10,12 @@ import SwiftUI
 
 extension ViewModel {
     
-    var primaryKeyName : String {self.model.currentKey.noteString}
-    var primaryNearKeyFlatName : String {self.model.currentKey.nearKeyFlat.noteString}
-    var primaryNearKeySharpName : String {self.model.currentKey.nearKeySharp.noteString}
-    var relativeKeyNameName : String {self.model.currentKey.relativeKey.noteString}
-    var relativeNearKeyFlatName : String {self.model.currentKey.relativeKey.nearKeyFlat.noteString}
-    var relativeNearKeySharpName : String {self.model.currentKey.relativeKey.nearKeySharp.noteString}
+    var primaryKeyLabelString : String {self.model.currentKey.noteString}
+    var primaryNearKeyFlatLabelString : String {self.model.currentKey.nearKeyFlat.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
+    var primaryNearKeySharpLabelString : String {self.model.currentKey.nearKeySharp.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
+    var relativeKeyLabelString : String {self.model.currentKey.relativeKey.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
+    var relativeNearKeyFlatLabelString : String {self.model.currentKey.relativeKey.nearKeyFlat.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
+    var relativeNearKeySharpLabelString : String {self.model.currentKey.relativeKey.nearKeySharp.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
     
     func chordNoteStrings(forScaleDegree i: Int) -> [String] {
         let pitches : [PitchClass] = self.model.currentKey.chordForScaleDegree(i)
