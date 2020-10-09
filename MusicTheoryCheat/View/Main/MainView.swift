@@ -19,7 +19,7 @@ struct MainView: View {
                     Text("Options")
                 }
                 KeyPickerView()
-                Text(self.optionsViewModel.model.currentKey.name(withSpelling: self.optionsViewModel.model.preferredSpelling))
+                Text(self.optionsViewModel.model.currentKey.name)
             }.navigationBarHidden(true)
         }
     }

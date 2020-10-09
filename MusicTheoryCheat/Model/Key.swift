@@ -7,14 +7,52 @@
 
 import Foundation
 
-struct Key {
+struct Key : Equatable {
     
     var keyCenter : PitchClass
     var tonality : Tonality
+    var preferSharpSpelling : Bool = false
     
-    //TODO: Fix this!!!
-    func name(withSpelling spelling: KeySpelling = .flats) -> String {
-        let noteString = self.keyCenter.stringLiteral(withKeySpelling: spelling)
+    static func == (lhs: Key, rhs: Key) -> Bool {
+        return rhs.keyCenter == lhs.keyCenter && rhs.tonality == lhs.tonality
+    }
+    
+    var name : String {
+        var noteString : String {
+            var str = ""
+            func spellWithSharps() {
+                str = self.keyCenter.stringLiteral(withKeySpelling: .sharps)
+            }
+            func spellWithFlats() {
+                str = self.keyCenter.stringLiteral()
+            }
+            if self.tonality == .major {
+                switch self.keyCenter {
+                case .gFlat:
+                    if self.preferSharpSpelling {
+                        spellWithSharps()
+                    } else {
+                        fallthrough
+                    }
+                default:
+                    spellWithFlats()
+                }
+            } else {
+                switch self.keyCenter {
+                case .aFlat, .dFlat, .gFlat:
+                    spellWithSharps()
+                case .eFlat:
+                    if self.preferSharpSpelling {
+                        spellWithSharps()
+                    } else {
+                        fallthrough
+                    }
+                default:
+                    spellWithFlats()
+                }
+            }
+            return str
+        }
         let tonalityString = self.tonality.rawValue
         return noteString + tonalityString
     }
@@ -40,17 +78,6 @@ struct Key {
     var nearKeyFlat : Key {
         let keyCenter = self.keyCenter.pitchClassFor(5, stepsInDirection: .up)
         return Key(keyCenter: keyCenter, tonality: self.tonality)
-    }
-    
-    var spelling : KeySpelling {
-        var result : KeySpelling = .flats
-        switch self.keyCenter {
-        case .g, .d, .a, .e, .b:
-            result = .sharps
-        default:
-            break
-        }
-        return result
     }
     
 }

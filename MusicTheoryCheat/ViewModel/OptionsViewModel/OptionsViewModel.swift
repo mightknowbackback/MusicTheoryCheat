@@ -20,7 +20,7 @@ class OptionsViewModel : ObservableObject {
             self.model.currentKeyIndex = self.model.currentKey.relativeKey.keyCenter.rawValue
             self.model.saveOptions()
             self.printInfo()
-            print(self.model.currentKey.name())
+            print(self.model.currentKey.name)
         })
     let tonalities : [Tonality] = Tonality.all
     

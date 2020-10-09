@@ -55,7 +55,7 @@ import Foundation
  Launch Screen
  Onboarding (Launch Screen with forced acknowledgement)
  Main (to Options, Toggle Info Mode)
- Options (to Main, to Info)
+ // Options (to Main, to Info)
  Info (Popover, link to other apps)
  
  */

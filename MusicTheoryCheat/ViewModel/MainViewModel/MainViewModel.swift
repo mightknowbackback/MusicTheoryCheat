@@ -84,6 +84,6 @@ class MainViewModel : ObservableObject {
     
     // MARK: FOR TESTING ONLY!!!
     private func printKeyName() {
-        print("Key is \(self.options.model.currentKey.name(withSpelling: KeySpelling.all[self.options.model.preferredSpellingIndex]))")
+        print("Key is \(self.options.model.currentKey.name)")
     }
 }
