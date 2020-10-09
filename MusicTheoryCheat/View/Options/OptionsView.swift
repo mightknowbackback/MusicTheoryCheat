@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OptionsView: View {
     
-    @EnvironmentObject var viewModel : OptionsViewModel
+    @EnvironmentObject var viewModel : ViewModel
     
     var body: some View {
         Form {

@@ -10,7 +10,7 @@ import SwiftUI
 
 class MainViewModel : ObservableObject {
     
-    var options : OptionsViewModel
+    var options : ViewModel
     
     // Display proper order based on chosen options
     var keyOrder : [PitchClass] {
@@ -76,7 +76,7 @@ class MainViewModel : ObservableObject {
         set: self.keyBindingSetter)
     
     // MARK: Initialization
-    init(_ options: OptionsViewModel) {
+    init(_ options: ViewModel) {
         self.options = options
 //        self.key = Key(keyCenter: PitchClass.all[options.model.currentKeyIndex], tonality: Tonality.all[options.model.featuredTonalityIndex])
         self.printKeyName()

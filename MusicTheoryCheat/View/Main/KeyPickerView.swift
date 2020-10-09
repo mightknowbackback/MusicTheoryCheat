@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KeyPickerView: View {
     
-    @EnvironmentObject var optionsViewModel : OptionsViewModel
+    @EnvironmentObject var optionsViewModel : ViewModel
     @EnvironmentObject var mainViewModel : MainViewModel
     
     var body: some View {
