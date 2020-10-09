@@ -18,7 +18,7 @@ struct MainView: View {
                     Text("Options")
                 }
                 KeyPickerView()
-                Text(self.viewModel.model.currentKey.name)
+                Text(self.viewModel.primaryKeyName)
             }.navigationBarHidden(true)
         }
     }

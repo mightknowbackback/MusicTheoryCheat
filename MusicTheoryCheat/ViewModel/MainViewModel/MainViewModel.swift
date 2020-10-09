@@ -10,5 +10,6 @@ import SwiftUI
 
 extension ViewModel {
     
+    var primaryKeyName : String {self.model.currentKey.name}
     
 }
