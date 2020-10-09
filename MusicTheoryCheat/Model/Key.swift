@@ -57,6 +57,35 @@ struct Key : Equatable {
     }
     private var tonalityString : String {self.tonality.rawValue}
     var name : String {self.noteString + self.tonalityString}
+    var spelling : KeySpelling {
+        if self.tonality == .major {
+            switch self.keyCenter {
+            case .g, .d, .a, .e, .b:
+                return .sharps
+            case .gFlat:
+                if self.preferSharpSpelling {
+                    return .sharps
+                } else {
+                    fallthrough
+                }
+            default:
+                return .flats
+            }
+        } else {
+            switch self.keyCenter {
+            case .e, .b, .gFlat, .dFlat, .aFlat:
+                return .sharps
+            case .eFlat:
+                if self.preferSharpSpelling {
+                    return .sharps
+                } else {
+                    fallthrough
+                }
+            default:
+                return .flats
+            }
+        }
+    }
     
     // MARK: Key Information
     // Diatonic scale from root
@@ -66,6 +95,13 @@ struct Key : Equatable {
             array.append(self.keyCenter.pitchClassFor(i, stepsInDirection: .up))
         }
         return array
+    }
+    func chordForScaleDegree(_ i: Int) -> [PitchClass] {
+        let root = self.scale[i]
+        let third = i + 2 > 6 ? self.scale[i - 4] : self.scale[i + 2]
+        let fifth = i + 4 > 6 ? self.scale[i - 2] : self.scale[i + 4]
+        let seventh = i - 1 < 0 ? self.scale[i + 6] : self.scale[i - 1]
+        return [root, third, fifth, seventh]
     }
     // Relative Major or minor (key with same accidentals)
     var relativeKey : Key {
