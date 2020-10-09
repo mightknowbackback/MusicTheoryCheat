@@ -10,7 +10,6 @@ import SwiftUI
 
 extension ViewModel {
     
-    // MARK: Featured Tonality
     var featuredTonalityBinding : Binding<Int> {
         Binding<Int>(
             get: {return self.model.featuredTonalityIndex},
@@ -23,7 +22,6 @@ extension ViewModel {
         })
     }
 
-    // MARK: Key Selection Method
     var keySelectionBinding : Binding<Int> {
         Binding<Int>(
             get: {return self.model.keySelectionMethodIndex},
@@ -34,7 +32,6 @@ extension ViewModel {
         })
     }
     
-    // MARK: Numeric Symbol Type
     var symbolTypeBinding : Binding<Int> {
         Binding<Int>(
             get: {return self.model.symbolTypeIndex},
@@ -45,7 +42,6 @@ extension ViewModel {
         })
     }
     
-    // MARK: Preferred Spelling
     var preferredSpellingBinding : Binding<Int> {
         Binding<Int>(
             get: {return self.model.preferredSpellingIndex},

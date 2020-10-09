@@ -31,6 +31,7 @@ extension ViewModel {
         }
         return array
     }
+    // Display proper string for chosen options
     var pickerStrings : [String] {
         var array : [String] = []
         let roots = self.keyOrder
