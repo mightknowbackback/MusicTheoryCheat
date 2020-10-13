@@ -11,7 +11,7 @@ import SwiftUI
 protocol InfoDisplayable : View {
     var isShowingQuestionMark : Binding<Bool> {get}
     var showInfo: Binding<Bool> {get}
-    var infoString : Binding<String> {get}
+    var infoString : String {get}
     associatedtype NormalView : View
     var normalView : NormalView {get}
     associatedtype InfoRequestView : View

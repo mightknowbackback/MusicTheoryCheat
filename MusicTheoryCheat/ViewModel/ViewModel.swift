@@ -11,6 +11,9 @@ import SwiftUI
 class ViewModel : ObservableObject {
     
     @Published var model : OptionsModel = OptionsModel()
+    @Published var showInfoClickables : Bool = false
+    @Published var infoText : String = ""
+    @Published var infoViewIsShowing : Bool = false
     
     let tonalities : [Tonality] = Tonality.all
     let keySelectionMethods : [KeySelectionMethod] = KeySelectionMethod.all

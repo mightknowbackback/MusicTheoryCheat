@@ -7,39 +7,36 @@
 
 import SwiftUI
 
-struct InfoDetailView: View {
-    let text : Binding<String>
+struct InfoDetailView<Presenting>: View where Presenting : View {
+    let text : String
     let isShowing : Binding<Bool>
+    let presenting : () -> Presenting
     var body: some View {
-        VStack {
-            Text("Info")
-            Text(self.text.wrappedValue)
-            Button(action: {
-                
-                    self.isShowing.wrappedValue = false
-                
-            }) {
-                Text("Done")
+        ZStack {
+            self.presenting().allowsHitTesting(false)
+            VStack {
+                Text("Info").padding()
+                Text(self.text).padding()
+                Button(action: {
+                        self.isShowing.wrappedValue = false
+                    
+                }) {
+                    Text("Done").padding()
+                }
             }
+            .background(Color.gray)
+            .padding(32)
         }
-    }
-}
-
-struct InfoDetailView_Previews: PreviewProvider {
-    static var test : Binding<String> = Binding(get: {return "Testing, 1, 2, 3?"}, set: {_ in})
-    static var isShowing : Bool = true
-    static var previews: some View {
-        InfoDetailView(text: Self.test  , isShowing: Binding<Bool>(get: {Self.isShowing}, set: {_ in}))
     }
 }
 
 extension View {
     
-    func showInfoView(_ isShowing: Binding<Bool>, withText text: Binding<String>) -> some View {
+    func showInfoView(_ isShowing: Binding<Bool>, withText text: String) -> some View {
         if isShowing.wrappedValue {
             return AnyView(ZStack {
-                self
-                InfoDetailView(text: text, isShowing: isShowing)
+                InfoDetailView(text: text, isShowing: isShowing,
+                               presenting: { self })
             })
         } else {
             return AnyView(self)
@@ -47,3 +44,13 @@ extension View {
     }
     
 }
+
+struct InfoDetailView_Previews: PreviewProvider {
+    static var isShowing : Binding<Bool> = Binding<Bool>(get: {return true}, set: {_ in})
+    static let viewModel = ViewModel()
+    static var previews: some View {
+        MainView().showInfoView(Self.isShowing, withText: Self.viewModel.infoText)
+    }
+}
+
+

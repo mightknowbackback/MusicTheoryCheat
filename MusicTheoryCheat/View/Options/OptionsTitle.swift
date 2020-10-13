@@ -9,45 +9,47 @@ import Foundation
 import SwiftUI
 
 struct OptionsTitleNormalView : View {
+    @EnvironmentObject var viewModel : ViewModel
     let title : String
     var body : some View {
         return Text(self.title)
     }
 }
 struct OptionsTitleInfoView : View {
-    let showInfo : Binding<Bool>
+    
+    @EnvironmentObject var viewModel : ViewModel
+    var info : String
     var body : some View {
-        return Button(action: {self.showInfo.wrappedValue = true}) {
+        return Button(action: {
+            self.viewModel.infoText = self.info
+            self.viewModel.infoViewIsShowing = true
+            
+        }) {
             Text("?")
         }
     }
     
 }
-struct OptionsTitle : InfoDisplayable {
-
-
+struct OptionsTitle : View, InfoDisplayable {
+    
+    @EnvironmentObject var viewModel : ViewModel
+    
     let title : String
-
-    var isShowingQuestionMark: Binding<Bool>
+    var isShowingQuestionMark: Binding<Bool> {
+        self.$viewModel.showInfoClickables
+    }
     var showInfo: Binding<Bool>
-
-    var infoString: Binding<String>
-
+    var infoString: String
     var normalView: OptionsTitleNormalView
-
     var infoRequestView: OptionsTitleInfoView
-
-
     typealias NormalView = OptionsTitleNormalView
-
     typealias InfoRequestView = OptionsTitleInfoView
 
-    init(title: String, isShowingAsClickable: Binding<Bool>, infoString: Binding<String>, showInfo: Binding<Bool>) {
+    init(title: String, infoString: String, showInfo: Binding<Bool>) {
         self.title = title
-        self.isShowingQuestionMark = isShowingAsClickable
         self.infoString = infoString
         self.normalView = OptionsTitleNormalView(title: title)
-        self.infoRequestView = OptionsTitleInfoView(showInfo: showInfo)
+        self.infoRequestView = OptionsTitleInfoView(info: self.infoString)
         self.showInfo = showInfo
     }
 
