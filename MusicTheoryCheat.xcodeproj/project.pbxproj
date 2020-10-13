@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960AE4FD2534DD9D006993A0 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AE4FC2534DD9D006993A0 /* Info.swift */; };
+		960AE5022534EC43006993A0 /* InfoDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AE5012534EC43006993A0 /* InfoDisplayable.swift */; };
+		960AE514253500E6006993A0 /* OptionsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AE5062534F078006993A0 /* OptionsTitle.swift */; };
+		960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AE52625355F89006993A0 /* InfoDetailView.swift */; };
 		960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE55E2523E84A003C724F /* AppDelegate.swift */; };
 		960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5602523E84A003C724F /* SceneDelegate.swift */; };
 		960DE5632523E84A003C724F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5622523E84A003C724F /* ContentView.swift */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960AE4FC2534DD9D006993A0 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		960AE5012534EC43006993A0 /* InfoDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDisplayable.swift; sourceTree = "<group>"; };
+		960AE5062534F078006993A0 /* OptionsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTitle.swift; sourceTree = "<group>"; };
+		960AE52625355F89006993A0 /* InfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailView.swift; sourceTree = "<group>"; };
 		960DE55B2523E84A003C724F /* MusicTheoryCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTheoryCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960DE55E2523E84A003C724F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960DE5602523E84A003C724F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 				966B8678252CEBAC0026431C /* MusicEnums.swift */,
 				966B8685252D11DA0026431C /* Key.swift */,
 				966B86BB252D2EBC0026431C /* OptionsModel.swift */,
+				960AE4FC2534DD9D006993A0 /* Info.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				966B8692252D1BB20026431C /* ViewModel.swift */,
+				960AE5012534EC43006993A0 /* InfoDisplayable.swift */,
 				966B86A4252D28680026431C /* MainViewModel */,
 				966B86A5252D288B0026431C /* OptionsViewModel */,
 			);
@@ -196,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				960DE5622523E84A003C724F /* ContentView.swift */,
+				960AE52625355F89006993A0 /* InfoDetailView.swift */,
 				966B86AE252D2A020026431C /* Main */,
 				966B86AF252D2A090026431C /* Options */,
 			);
@@ -232,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				966B86B0252D2A2A0026431C /* OptionsView.swift */,
+				960AE5062534F078006993A0 /* OptionsTitle.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -367,20 +379,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				966B86BC252D2EBC0026431C /* OptionsModel.swift in Sources */,
+				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,
 				966B8686252D11DA0026431C /* Key.swift in Sources */,
 				966006E1252F8ADA0046024E /* KeyPickerViewModel.swift in Sources */,
 				966B8671252CE89B0026431C /* Constants.swift in Sources */,
+				960AE5022534EC43006993A0 /* InfoDisplayable.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
 				966006E92530BA680046024E /* OptionsViewModel.swift in Sources */,
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
+				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
 				966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */,
 				966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */,
 				960DE5932523E878003C724F /* Functionality.swift in Sources */,
 				966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */,
+				960AE514253500E6006993A0 /* OptionsTitle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.euphorophonics.Theory-Wheel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

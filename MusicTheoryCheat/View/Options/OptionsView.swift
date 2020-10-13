@@ -10,10 +10,14 @@ import SwiftUI
 struct OptionsView: View {
     
     @EnvironmentObject var viewModel : ViewModel
+    @State var showInfoClickables : Bool = false
+    @State var showInfoView : Bool = false
+    @State var infoText : String = "Testing..."
     
     var body: some View {
         Form {
-            Section(header: Text("KEY SELECTION METHOD")) {
+            Section {
+                OptionsTitle(title: "KEY SELECTION METHOD", isShowingAsClickable: self.$showInfoClickables, infoString: self.$infoText, showInfo: self.$showInfoView)
                 Picker("", selection: self.viewModel.keySelectionBinding) {
                     ForEach(0..<self.viewModel.keySelectionMethods.count) {i in
                         Text(self.viewModel.keySelectionMethods[i].rawValue)
@@ -42,6 +46,8 @@ struct OptionsView: View {
                 }.pickerStyle(SegmentedPickerStyle())
             }
         }
+        .navigationBarItems(trailing: Button(action: {self.showInfoClickables.toggle()}) {Text("Info")})
+        .showInfoView(self.$showInfoView, withText: self.$infoText)
     }
 }
 

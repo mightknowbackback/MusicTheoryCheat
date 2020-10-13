@@ -8,7 +8,7 @@
 import Foundation
 
 enum KeySelectionMethod : String {
-    case byAccidentals = "# of Accidentals", keyName = "Key Name"
+    case byAccidentals = "Accidentals", keyName = "Key Name"
     static var all : [KeySelectionMethod] = [.byAccidentals, .keyName]
 }
 enum NumericSymbolType : String {
