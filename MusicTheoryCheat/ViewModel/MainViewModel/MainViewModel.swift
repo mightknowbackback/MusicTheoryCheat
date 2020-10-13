@@ -10,10 +10,10 @@ import SwiftUI
 
 extension ViewModel {
     
-    var primaryKeyLabelString : String {self.model.currentKey.noteString}
+    var primaryKeyLabelString : String {self.model.currentKey.name}
     var primaryNearKeyFlatLabelString : String {self.model.currentKey.nearKeyFlat.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
     var primaryNearKeySharpLabelString : String {self.model.currentKey.nearKeySharp.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
-    var relativeKeyLabelString : String {self.model.currentKey.relativeKey.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
+    var relativeKeyLabelString : String {self.model.currentKey.relativeKey.name}
     var relativeNearKeyFlatLabelString : String {self.model.currentKey.relativeKey.nearKeyFlat.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
     var relativeNearKeySharpLabelString : String {self.model.currentKey.relativeKey.nearKeySharp.keyCenter.stringLiteral(withKeySpelling: self.model.currentKey.spelling)}
     
