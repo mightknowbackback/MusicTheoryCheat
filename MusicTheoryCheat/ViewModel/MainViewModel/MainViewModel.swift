@@ -27,7 +27,8 @@ extension ViewModel {
         case .nashvilleNumbers:
             return majorNashvilleNumbers
         case .romanNumerals:
-            return majorRomanNumerals
+            let b = self.model.featuredTonality == .major
+            return b ? majorRomanNumerals : majorRomanNumeralsOffset
         }
     }
     private var minorScaleDegreeStrings : [String] {
@@ -35,7 +36,8 @@ extension ViewModel {
         case .nashvilleNumbers:
             return minorNashvilleNumbers
         case .romanNumerals:
-            return minorRomanNumerals
+            let b = self.model.featuredTonality == .minor
+            return b ? minorRomanNumerals : minorRomanNumeralsOffset
         }
     }
     var featuredKeyScaleDegreeStrings : [String] {
