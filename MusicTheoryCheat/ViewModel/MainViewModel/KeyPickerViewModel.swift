@@ -53,6 +53,11 @@ extension ViewModel {
                 add(num)
             }
         }
+        if self.model.featuredTonality == .minor {
+            array = array.map {
+                $0.lowercased()
+            }
+        }
         return array
     }
     

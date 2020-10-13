@@ -55,8 +55,14 @@ struct Key : Equatable {
         }
         return str
     }
+    var noteStringCased : String {
+        self.tonality == .major ? self.noteString : self.noteString.lowercased()
+    }
     private var tonalityString : String {self.tonality.rawValue}
-    var name : String {self.noteString + self.tonalityString}
+    var name : String {
+        return self.noteStringCased + " " + self.tonalityString
+        
+    }
     var spelling : KeySpelling {
         if self.tonality == .major {
             switch self.keyCenter {
