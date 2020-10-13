@@ -19,7 +19,24 @@ enum NumericSymbolType : String {
 struct OptionsModel : Codable {
     
     // MARK: Properties
-    var featuredTonalityIndex : Int = 0
+    var featuredTonalityIndex : Int = 0 {
+        didSet {
+            switch oldValue {
+            case 0:
+                var newKey = self.currentKeyIndex - 6
+                if newKey < 0 {
+                    newKey += 12
+                }
+                self.currentKeyIndex = newKey
+            default:
+                var newKey = self.currentKeyIndex + 6
+                if newKey > 11 {
+                    newKey -= 12
+                }
+                self.currentKeyIndex = newKey
+            }
+        }
+    }
     var featuredTonality : Tonality {
         Tonality.all[self.featuredTonalityIndex]
     }
