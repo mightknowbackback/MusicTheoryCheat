@@ -23,20 +23,20 @@ extension ViewModel {
         return pitches.map {$0.stringLiteral(withKeySpelling: spelling)}
     }
     private var majorScaleDegreeStrings : [String] {
+        let b = self.model.featuredTonality == .major
         switch self.model.symbolType {
         case .nashvilleNumbers:
-            return majorNashvilleNumbers
+            return b ? majorNashvilleNumbers : minorNashvilleNumbers
         case .romanNumerals:
-            let b = self.model.featuredTonality == .major
             return b ? majorRomanNumerals : majorRomanNumeralsOffset
         }
     }
     private var minorScaleDegreeStrings : [String] {
+        let b = self.model.featuredTonality == .minor
         switch self.model.symbolType {
         case .nashvilleNumbers:
-            return minorNashvilleNumbers
+            return !b ? majorNashvilleNumbers : minorNashvilleNumbers
         case .romanNumerals:
-            let b = self.model.featuredTonality == .minor
             return b ? minorRomanNumerals : minorRomanNumeralsOffset
         }
     }
