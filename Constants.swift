@@ -7,6 +7,7 @@
 
 import Foundation
 
+let appName : String = "Music Theory Cheat"
 let flatSymbol : String = "♭"
 let naturalSymbol : String = "♮"
 let sharpSymbol : String = "♯"

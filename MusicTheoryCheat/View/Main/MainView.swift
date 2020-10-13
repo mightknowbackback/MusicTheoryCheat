@@ -16,48 +16,65 @@ struct MainView: View {
             
             VStack {
                 
-                NavigationLink(destination: OptionsView()) {
-                    Text("Options")
-                }
                 Spacer()
                 KeyPickerView()
                 Spacer()
+                
                 HStack {
+                    
                     Text(self.viewModel.primaryNearKeyFlatLabelString).font(.subheadline)
                     Spacer()
                     Text(self.viewModel.primaryKeyLabelString).font(.headline)
                     Spacer()
                     Text(self.viewModel.primaryNearKeySharpLabelString).font(.subheadline)
+                    
                 }.padding()
                 Spacer()
+                
                 VStack {
+                    
                     ForEach(0..<self.viewModel.featuredKeyScaleDegreeStrings.count) {i in
                         HStack {
-                            Text(self.viewModel.featuredKeyScaleDegreeStrings[i]).font(.headline)
+                            
+                            Text(self.viewModel.featuredKeyScaleDegreeStrings[i]).font(.headline).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[0])
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[0]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[1])
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[1]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[2])
+                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[2]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.relativeKeyScaleDegreeStrings[i]).font(.headline)
-                        }.padding()
+                            Text(self.viewModel.relativeKeyScaleDegreeStrings[i]).font(.headline).frame(maxWidth: .infinity)
+                            
+                        }.padding([.top, .bottom])
                     }
-                }.padding()
+                }
+                
                 Spacer()
                 HStack {
+                    
                     Text(self.viewModel.relativeNearKeyFlatLabelString).font(.subheadline)
                     Spacer()
                     Text(self.viewModel.relativeKeyLabelString).font(.headline)
                     Spacer()
                     Text(self.viewModel.relativeNearKeySharpLabelString).font(.subheadline)
+                    
                 }.padding()
                 Spacer()
+                
             }
-            .navigationBarHidden(true)
             .padding()
+            .navigationBarItems(
+                leading: Button(action: {self.viewModel.showInfoClickables.toggle()}) {
+                    Text("Info")
+            },
+                trailing: NavigationLink(destination: OptionsView()) {
+                    Text("Options")
+            })
+            .navigationTitle(appName.uppercased())
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
