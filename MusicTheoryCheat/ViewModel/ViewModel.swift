@@ -17,7 +17,7 @@ class ViewModel : ObservableObject {
     @Published var orientation : ScreenOrientation = .portrait
     @Published var model : Model = Model()
     @Published var showInfoClickables : Bool = false
-    @Published var infoText : String = ""
+    @Published var infoKey : InfoKey = .keySelectionMethod
     @Published var infoViewIsShowing : Bool = false
     
     let tonalities : [Tonality] = Tonality.all

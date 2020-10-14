@@ -16,7 +16,7 @@ struct OptionsView: View {
         Form {
             Section {
                 
-                OptionsTitle(title: "KEY SELECTION METHOD",infoString: Info.getDetailString(forIndex: 0), showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[0], showInfo: self.$viewModel.infoViewIsShowing)
                 
                 Picker("", selection: self.viewModel.keySelectionBinding) {
                     ForEach(0..<self.viewModel.keySelectionMethods.count) {i in
@@ -27,7 +27,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(title: "FEATURED TONALITY",infoString: Info.getDetailString(forIndex: 1), showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[1], showInfo: self.$viewModel.infoViewIsShowing)
                 
                 Picker("", selection: self.viewModel.featuredTonalityBinding) {
                     ForEach(0..<self.viewModel.tonalities.count) {i in
@@ -38,7 +38,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(title: "SYMBOL TYPE",infoString: Info.getDetailString(forIndex: 2), showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[2], showInfo: self.$viewModel.infoViewIsShowing)
                 
                 Picker("", selection: self.viewModel.symbolTypeBinding) {
                     ForEach(0..<self.viewModel.symbolTypes.count) {i in
@@ -49,7 +49,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(title: "PREFERRED ENHARMONIC SPELLING",infoString: Info.getDetailString(forIndex: 3), showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[3], showInfo: self.$viewModel.infoViewIsShowing)
                 
                 Picker("", selection: self.viewModel.preferredSpellingBinding) {
                     ForEach(0..<self.viewModel.preferredSpellingTypes.count) {i in
@@ -60,7 +60,7 @@ struct OptionsView: View {
             }
         }
         //.navigationBarItems(trailing: )
-        .showInfoView(self.$viewModel.infoViewIsShowing, withText: self.viewModel.infoText)
+        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
             leading: Button(action: {self.presentationMode.wrappedValue.dismiss()}) {Text("Back")},

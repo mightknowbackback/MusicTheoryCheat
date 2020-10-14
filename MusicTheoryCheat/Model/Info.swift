@@ -10,10 +10,10 @@ import Foundation
 enum InfoKey : String, CaseIterable {
     
     // MARK: OptionsView Keys
-    case keySelectionMethod = "Options: Key Selection Method" // 0
-    case featuredTonality = "Options: Featured Tonality" // 1
-    case symbolType = "Options: Symbol Type" // 2
-    case preferredEnharmonicSpelling = "Options: Preferred Enharmonic Spelling" // 3
+    case keySelectionMethod = "Key Selection Method" // 0
+    case featuredTonality = "Featured Tonality" // 1
+    case symbolType = "Numbering Type" // 2
+    case preferredEnharmonicSpelling = "Preferred Enharmonic Spelling" // 3
     case chordType = "Chord Type" // 4
     
     // MARK: MainView Keys

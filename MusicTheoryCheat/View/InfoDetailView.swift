@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct InfoDetailView<Presenting>: View where Presenting : View {
-    let text : String
+    let infoKey : InfoKey
     let isShowing : Binding<Bool>
     let presenting : () -> Presenting
     var body: some View {
         ZStack {
             self.presenting().allowsHitTesting(false)
             VStack {
-                Text("Info").padding()
-                Text(self.text).padding()
+                Text(self.infoKey.rawValue.uppercased()).padding()
+                Text(Info.details[self.infoKey.rawValue]!).padding()
                 Button(action: {
                         self.isShowing.wrappedValue = false
                     
@@ -32,10 +32,10 @@ struct InfoDetailView<Presenting>: View where Presenting : View {
 
 extension View {
     
-    func showInfoView(_ isShowing: Binding<Bool>, withText text: String) -> some View {
+    func showInfoView(_ isShowing: Binding<Bool>, withInfoKey infoKey: InfoKey) -> some View {
         if isShowing.wrappedValue {
             return AnyView(ZStack {
-                InfoDetailView(text: text, isShowing: isShowing,
+                InfoDetailView(infoKey: infoKey, isShowing: isShowing,
                                presenting: { self })
             })
         } else {
@@ -49,7 +49,7 @@ struct InfoDetailView_Previews: PreviewProvider {
     static var isShowing : Binding<Bool> = Binding<Bool>(get: {return true}, set: {_ in})
     static let viewModel = ViewModel()
     static var previews: some View {
-        MainView().showInfoView(Self.isShowing, withText: Self.viewModel.infoText)
+        MainView().showInfoView(Self.isShowing, withInfoKey: Self.viewModel.infoKey)
     }
 }
 

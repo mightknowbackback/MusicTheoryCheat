@@ -18,10 +18,10 @@ struct OptionsTitleNormalView : View {
 struct OptionsTitleInfoView : View {
     
     @EnvironmentObject var viewModel : ViewModel
-    var info : String
+    var infoKey : InfoKey
     var body : some View {
         return Button(action: {
-            self.viewModel.infoText = self.info
+            self.viewModel.infoKey = self.infoKey
             self.viewModel.infoViewIsShowing = true
             
         }) {
@@ -38,19 +38,19 @@ struct OptionsTitle : View, InfoDisplayable {
     var isShowingQuestionMark: Binding<Bool> {
         self.$viewModel.showInfoClickables
     }
+    let infoKey: InfoKey
     var showInfo: Binding<Bool>
-    var infoString: String
     var normalView: OptionsTitleNormalView
     var infoRequestView: OptionsTitleInfoView
     typealias NormalView = OptionsTitleNormalView
     typealias InfoRequestView = OptionsTitleInfoView
 
-    init(title: String, infoString: String, showInfo: Binding<Bool>) {
-        self.title = title
-        self.infoString = infoString
+    init(infoKey: InfoKey, showInfo: Binding<Bool>) {
+        self.title = infoKey.rawValue.uppercased()
         self.normalView = OptionsTitleNormalView(title: title)
-        self.infoRequestView = OptionsTitleInfoView(info: self.infoString)
+        self.infoRequestView = OptionsTitleInfoView(infoKey: infoKey)
         self.showInfo = showInfo
+        self.infoKey = infoKey
     }
 
 }
