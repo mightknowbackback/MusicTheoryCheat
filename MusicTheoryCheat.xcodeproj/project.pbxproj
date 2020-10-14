@@ -31,6 +31,7 @@
 		966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86D6252D55F70026431C /* KeyPickerView.swift */; };
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
+		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		966B86C9252D3DAD0026431C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				960DE5922523E878003C724F /* Functionality.swift */,
+				96B506812536A99B00D86A0D /* HourlyLog.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				960DE5932523E878003C724F /* Functionality.swift in Sources */,
 				966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */,
 				960AE514253500E6006993A0 /* OptionsTitle.swift in Sources */,
+				96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
