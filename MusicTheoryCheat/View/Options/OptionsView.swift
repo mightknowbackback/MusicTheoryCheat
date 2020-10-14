@@ -73,7 +73,8 @@ struct OptionsView: View {
 }
 
 struct OptionsView_Previews: PreviewProvider {
+    static let viewModel = ViewModel()
     static var previews: some View {
-        OptionsView()
+        OptionsView().environmentObject(Self.viewModel)
     }
 }

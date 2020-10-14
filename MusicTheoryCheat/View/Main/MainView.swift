@@ -36,15 +36,19 @@ struct MainView: View {
                     ForEach(0..<self.viewModel.featuredKeyScaleDegreeStrings.count) {i in
                         HStack {
                             
-                            Text(self.viewModel.featuredKeyScaleDegreeStrings[i]).font(.headline).frame(maxWidth: .infinity)
+                            ScaleDegreeLabel(text: self.viewModel.featuredKeyScaleDegreeStrings[i], infoKey: InfoKey.allCases[(i * 6) + 9]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[0]).frame(maxWidth: .infinity)
+                            ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[0], infoKey: InfoKey.allCases[(i * 6) + 10]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[1]).frame(maxWidth: .infinity)
+                            ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[1], infoKey: InfoKey.allCases[(i * 6) + 11]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.chordNoteStrings(forScaleDegree: i)[2]).frame(maxWidth: .infinity)
+                            ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[2], infoKey: InfoKey.allCases[(i * 6) + 12]).frame(maxWidth: .infinity)
                             Spacer()
-                            Text(self.viewModel.relativeKeyScaleDegreeStrings[i]).font(.headline).frame(maxWidth: .infinity)
+                            if self.viewModel.model.showSevenths {
+                                ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[3], infoKey: InfoKey.allCases[(i * 6) + 13]).frame(maxWidth: .infinity)
+                                Spacer()
+                            }
+                            ScaleDegreeLabel(text: self.viewModel.relativeKeyScaleDegreeStrings[i], infoKey: InfoKey.allCases[(i * 6) + 14]).frame(maxWidth: .infinity)
                             
                         }.padding([.top, .bottom])
                     }
@@ -75,13 +79,17 @@ struct MainView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            self.viewModel.showInfoClickables = false
+        }
         // TODO: DEBUG - This causes OptionsView to be dismissed when the InfoDetailView appears over that view.
 //        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
+    static let viewModel = ViewModel()
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(Self.viewModel)
     }
 }

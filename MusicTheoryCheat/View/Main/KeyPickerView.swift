@@ -34,5 +34,6 @@ struct KeyPickerView_Previews: PreviewProvider {
     static let viewModel = ViewModel()
     static var previews: some View {
         KeyPickerView().environmentObject(Self.viewModel).previewLayout(PreviewLayout.sizeThatFits)
+        MainView().environmentObject(Self.viewModel)
     }
 }

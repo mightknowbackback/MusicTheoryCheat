@@ -52,5 +52,6 @@ struct MainKeyLabel_Previews: PreviewProvider {
         MainKeyNormalLabel(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
         MainKeyQuestionMark().previewLayout(PreviewLayout.sizeThatFits)
         MainKeyLabel(text: Self.text, infoKey: Self.infoKey).environmentObject(Self.viewModel)
+        MainView().environmentObject(Self.viewModel)
     }
 }

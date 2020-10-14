@@ -59,6 +59,6 @@ struct NearKeyLabel_Previews: PreviewProvider {
             NearKeyLabel(text: Self.text, infoKey: Self.infoKey).environmentObject(Self.viewModel).frame(maxWidth: .infinity)
             NearKeyLabel(text: Self.text, infoKey: Self.infoKey).environmentObject(Self.viewModel).frame(maxWidth: .infinity)
         }
-        
+        MainView().environmentObject(Self.viewModel)
     }
 }
