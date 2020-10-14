@@ -33,6 +33,7 @@
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
 		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
+		96B5068C2537822900D86A0D /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5068B2537822900D86A0D /* Challenges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
 		96B50686253770F600D86A0D /* NearKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearKeyLabel.swift; sourceTree = "<group>"; };
+		96B5068B2537822900D86A0D /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				960DE5922523E878003C724F /* Functionality.swift */,
 				96B506812536A99B00D86A0D /* HourlyLog.swift */,
+				96B5068B2537822900D86A0D /* Challenges.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966B86BC252D2EBC0026431C /* Model.swift in Sources */,
+				96B5068C2537822900D86A0D /* Challenges.swift in Sources */,
 				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,

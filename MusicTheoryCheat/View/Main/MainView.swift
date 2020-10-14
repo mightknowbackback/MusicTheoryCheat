@@ -22,11 +22,11 @@ struct MainView: View {
                 
                 HStack {
                     
-                    Text(self.viewModel.primaryNearKeyFlatLabelString).font(.subheadline)
+                    NearKeyLabel(text: self.viewModel.primaryNearKeyFlatLabelString, infoKey: InfoKey.allCases[6])
                     Spacer()
                     Text(self.viewModel.primaryKeyLabelString).font(.headline)
                     Spacer()
-                    Text(self.viewModel.primaryNearKeySharpLabelString).font(.subheadline)
+                    NearKeyLabel(text: self.viewModel.primaryNearKeySharpLabelString, infoKey: InfoKey.allCases[8])
                     
                 }.padding()
                 Spacer()
@@ -53,11 +53,11 @@ struct MainView: View {
                 Spacer()
                 HStack {
                     
-                    Text(self.viewModel.relativeNearKeyFlatLabelString).font(.subheadline)
+                    NearKeyLabel(text: self.viewModel.relativeNearKeyFlatLabelString, infoKey: InfoKey.allCases[51])
                     Spacer()
                     Text(self.viewModel.relativeKeyLabelString).font(.headline)
                     Spacer()
-                    Text(self.viewModel.relativeNearKeySharpLabelString).font(.subheadline)
+                    NearKeyLabel(text: self.viewModel.relativeNearKeySharpLabelString, infoKey: InfoKey.allCases[53])
                     
                 }.padding()
                 Spacer()
@@ -75,6 +75,8 @@ struct MainView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        // TODO: DEBUG - This causes OptionsView to be dismissed when the InfoDetailView appears over that view.
+//        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
     }
 }
 
