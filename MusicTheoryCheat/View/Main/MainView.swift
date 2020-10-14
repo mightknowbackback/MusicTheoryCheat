@@ -50,7 +50,7 @@ struct MainView: View {
                             }
                             ScaleDegreeLabel(text: self.viewModel.relativeKeyScaleDegreeStrings[i], infoKey: InfoKey.allCases[(i * 6) + 14]).frame(maxWidth: .infinity)
                             
-                        }.padding([.top, .bottom])
+                        }.frame(maxHeight: .infinity)
                     }
                 }
                 
@@ -67,7 +67,6 @@ struct MainView: View {
                 Spacer()
                 
             }
-            .padding()
             .navigationBarItems(
                 leading: Button(action: {self.viewModel.showInfoClickables.toggle()}) {
                     Text("Info")

@@ -37,6 +37,7 @@
 		96B506912537877800D86A0D /* MainKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506902537877800D86A0D /* MainKeyLabel.swift */; };
 		96B506962537A0F000D86A0D /* ScaleDegreeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506952537A0F000D86A0D /* ScaleDegreeLabel.swift */; };
 		96B5069B2537A51000D86A0D /* ChordToneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5069A2537A51000D86A0D /* ChordToneLabel.swift */; };
+		96B506A02537BA7F00D86A0D /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5069F2537BA7F00D86A0D /* CustomColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		96B506902537877800D86A0D /* MainKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyLabel.swift; sourceTree = "<group>"; };
 		96B506952537A0F000D86A0D /* ScaleDegreeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDegreeLabel.swift; sourceTree = "<group>"; };
 		96B5069A2537A51000D86A0D /* ChordToneLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordToneLabel.swift; sourceTree = "<group>"; };
+		96B5069F2537BA7F00D86A0D /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				966B8670252CE89B0026431C /* Constants.swift */,
+				96B5069F2537BA7F00D86A0D /* CustomColors.swift */,
 				966B8678252CEBAC0026431C /* MusicEnums.swift */,
 				966B8685252D11DA0026431C /* Key.swift */,
 				960AE4FC2534DD9D006993A0 /* Info.swift */,
@@ -410,6 +413,7 @@
 				966006E92530BA680046024E /* OptionsViewModel.swift in Sources */,
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
 				96B5069B2537A51000D86A0D /* ChordToneLabel.swift in Sources */,
+				96B506A02537BA7F00D86A0D /* CustomColors.swift in Sources */,
 				96B506962537A0F000D86A0D /* ScaleDegreeLabel.swift in Sources */,
 				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,

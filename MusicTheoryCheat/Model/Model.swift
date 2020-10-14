@@ -52,7 +52,7 @@ struct Model : Codable {
     var preferredSpelling : KeySpelling {
         KeySpelling.all[self.preferredSpellingIndex]
     }
-    var showSevenths : Bool = false
+    var showSevenths : Bool = true
     var currentKeyIndex : Int = 0
     var currentKey : Key {
         var key = Key(keyCenter: PitchClass.pitchClassBy(noteNumber: self.currentKeyIndex), tonality: self.featuredTonality)
