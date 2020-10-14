@@ -8,9 +8,14 @@
 import Foundation
 import SwiftUI
 
+enum ScreenOrientation {
+    case portrait, landscape
+}
+
 class ViewModel : ObservableObject {
     
-    @Published var model : OptionsModel = OptionsModel()
+    @Published var orientation : ScreenOrientation = .portrait
+    @Published var model : Model = Model()
     @Published var showInfoClickables : Bool = false
     @Published var infoText : String = ""
     @Published var infoViewIsShowing : Bool = false

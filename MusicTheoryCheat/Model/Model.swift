@@ -1,5 +1,5 @@
 //
-//  OptionsModel.swift
+//  Model.swift
 //  MusicTheoryCheat
 //
 //  Created by mightknow on 10/6/20.
@@ -16,7 +16,7 @@ enum NumericSymbolType : String {
     static var all : [NumericSymbolType] = [.romanNumerals, .nashvilleNumbers]
 }
 
-struct OptionsModel : Codable {
+struct Model : Codable {
     
     // MARK: Properties
     var featuredTonalityIndex : Int = 0 {

@@ -26,7 +26,7 @@
 		966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8678252CEBAC0026431C /* MusicEnums.swift */; };
 		966B8686252D11DA0026431C /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8685252D11DA0026431C /* Key.swift */; };
 		966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86B0252D2A2A0026431C /* OptionsView.swift */; };
-		966B86BC252D2EBC0026431C /* OptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86BB252D2EBC0026431C /* OptionsModel.swift */; };
+		966B86BC252D2EBC0026431C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86BB252D2EBC0026431C /* Model.swift */; };
 		966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86C9252D3DAD0026431C /* MainViewModel.swift */; };
 		966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86D6252D55F70026431C /* KeyPickerView.swift */; };
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
@@ -77,7 +77,7 @@
 		966B8685252D11DA0026431C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		966B8692252D1BB20026431C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		966B86B0252D2A2A0026431C /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
-		966B86BB252D2EBC0026431C /* OptionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsModel.swift; sourceTree = "<group>"; };
+		966B86BB252D2EBC0026431C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		966B86C9252D3DAD0026431C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 				966B8670252CE89B0026431C /* Constants.swift */,
 				966B8678252CEBAC0026431C /* MusicEnums.swift */,
 				966B8685252D11DA0026431C /* Key.swift */,
-				966B86BB252D2EBC0026431C /* OptionsModel.swift */,
 				960AE4FC2534DD9D006993A0 /* Info.swift */,
+				966B86BB252D2EBC0026431C /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966B86BC252D2EBC0026431C /* OptionsModel.swift in Sources */,
+				966B86BC252D2EBC0026431C /* Model.swift in Sources */,
 				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,

@@ -12,11 +12,21 @@ struct KeyPickerView: View {
     @EnvironmentObject var viewModel : ViewModel
     
     var body: some View {
-        Picker("", selection: self.viewModel.keyBinding) {
-            ForEach(0..<self.viewModel.pickerStrings.count) {i in
-                Text(self.viewModel.pickerStrings[i])
+        VStack {
+            if self.viewModel.model.keySelectionMethod == .byAccidentals {
+                HStack {
+                    Text("Flats")
+                    Spacer()
+                    Text("Sharps")
+                }
             }
-        }.pickerStyle(SegmentedPickerStyle())
+            Picker("", selection: self.viewModel.keyBinding) {
+                ForEach(0..<self.viewModel.pickerStrings.count) {i in
+                    Text(self.viewModel.pickerStrings[i])
+                }
+            }.pickerStyle(SegmentedPickerStyle())
+        }
+        
     }
 }
 
