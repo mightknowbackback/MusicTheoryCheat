@@ -36,9 +36,7 @@ struct NearKeyLabel: InfoDisplayable {
     }
     
     var infoKey: InfoKey
-    typealias NormalView = NearKeyNormalLabel
     var normalView: NearKeyNormalLabel
-    typealias InfoRequestView = NearKeyInfoLabel
     var infoRequestView: NearKeyInfoLabel
     
     init(text: String, infoKey: InfoKey) {
@@ -46,6 +44,7 @@ struct NearKeyLabel: InfoDisplayable {
         self.infoKey = infoKey
         self.infoRequestView = InfoRequestView(infoKey: infoKey)
     }
+    
 }
 
 struct NearKeyLabel_Previews: PreviewProvider {

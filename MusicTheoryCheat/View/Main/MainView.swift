@@ -24,7 +24,7 @@ struct MainView: View {
                     
                     NearKeyLabel(text: self.viewModel.primaryNearKeyFlatLabelString, infoKey: InfoKey.allCases[6])
                     Spacer()
-                    Text(self.viewModel.primaryKeyLabelString).font(.headline)
+                    MainKeyLabel(text: self.viewModel.primaryKeyLabelString, infoKey: InfoKey.allCases[7])
                     Spacer()
                     NearKeyLabel(text: self.viewModel.primaryNearKeySharpLabelString, infoKey: InfoKey.allCases[8])
                     
@@ -55,7 +55,7 @@ struct MainView: View {
                     
                     NearKeyLabel(text: self.viewModel.relativeNearKeyFlatLabelString, infoKey: InfoKey.allCases[51])
                     Spacer()
-                    Text(self.viewModel.relativeKeyLabelString).font(.headline)
+                    MainKeyLabel(text: self.viewModel.relativeKeyLabelString, infoKey: InfoKey.allCases[52])
                     Spacer()
                     NearKeyLabel(text: self.viewModel.relativeNearKeySharpLabelString, infoKey: InfoKey.allCases[53])
                     

@@ -34,6 +34,7 @@
 		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
 		96B5068C2537822900D86A0D /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5068B2537822900D86A0D /* Challenges.swift */; };
+		96B506912537877800D86A0D /* MainKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506902537877800D86A0D /* MainKeyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
 		96B50686253770F600D86A0D /* NearKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearKeyLabel.swift; sourceTree = "<group>"; };
 		96B5068B2537822900D86A0D /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
+		96B506902537877800D86A0D /* MainKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				966B86EB252D73260026431C /* MainView.swift */,
 				966B86D6252D55F70026431C /* KeyPickerView.swift */,
 				96B50686253770F600D86A0D /* NearKeyLabel.swift */,
+				96B506902537877800D86A0D /* MainKeyLabel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				966B8671252CE89B0026431C /* Constants.swift in Sources */,
 				960AE5022534EC43006993A0 /* InfoDisplayable.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
+				96B506912537877800D86A0D /* MainKeyLabel.swift in Sources */,
 				966006E92530BA680046024E /* OptionsViewModel.swift in Sources */,
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
 				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
