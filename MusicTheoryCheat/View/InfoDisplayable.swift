@@ -10,11 +10,10 @@ import SwiftUI
 
 protocol InfoDisplayable : View {
     var isShowingQuestionMark : Binding<Bool> {get}
-    var showInfo: Binding<Bool> {get}
     var infoKey : InfoKey {get}
     associatedtype NormalView : View
     var normalView : NormalView {get}
-    associatedtype InfoRequestView : View
+    associatedtype InfoRequestView : InfoRequestDisplay
     var infoRequestView : InfoRequestView {get}
 }
 
@@ -27,6 +26,27 @@ extension InfoDisplayable {
             return AnyView(self.normalView)
         }
     }
+}
+
+protocol InfoRequestDisplay : View {
+    
+    var viewModel : ViewModel {get}
+    var infoKey : InfoKey {get}
+    associatedtype QuestionMarkView : View
+    var questionMarkView : QuestionMarkView {get}
+}
+
+extension InfoRequestDisplay {
+    
+    var body : some View {
+        return Button(action: {
+            self.viewModel.infoKey = self.infoKey
+            self.viewModel.infoViewIsShowing = true
+        }) {
+            self.questionMarkView
+        }
+    }
+    
 }
 
 

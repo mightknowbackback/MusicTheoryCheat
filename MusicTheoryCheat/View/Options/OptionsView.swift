@@ -16,7 +16,7 @@ struct OptionsView: View {
         Form {
             Section {
                 
-                OptionsTitle(infoKey: InfoKey.allCases[0], showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[0])
                 
                 Picker("", selection: self.viewModel.keySelectionBinding) {
                     ForEach(0..<self.viewModel.keySelectionMethods.count) {i in
@@ -27,7 +27,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(infoKey: InfoKey.allCases[1], showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[1])
                 
                 Picker("", selection: self.viewModel.featuredTonalityBinding) {
                     ForEach(0..<self.viewModel.tonalities.count) {i in
@@ -38,7 +38,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(infoKey: InfoKey.allCases[2], showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[2])
                 
                 Picker("", selection: self.viewModel.symbolTypeBinding) {
                     ForEach(0..<self.viewModel.symbolTypes.count) {i in
@@ -49,7 +49,7 @@ struct OptionsView: View {
             }
             Section {
                 
-                OptionsTitle(infoKey: InfoKey.allCases[3], showInfo: self.$viewModel.infoViewIsShowing)
+                OptionsTitle(infoKey: InfoKey.allCases[3])
                 
                 Picker("", selection: self.viewModel.preferredSpellingBinding) {
                     ForEach(0..<self.viewModel.preferredSpellingTypes.count) {i in

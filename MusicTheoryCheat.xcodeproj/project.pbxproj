@@ -32,6 +32,7 @@
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
 		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
+		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
+		96B50686253770F600D86A0D /* NearKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearKeyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			children = (
 				966B86EB252D73260026431C /* MainView.swift */,
 				966B86D6252D55F70026431C /* KeyPickerView.swift */,
+				96B50686253770F600D86A0D /* NearKeyLabel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
 				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
+				96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
 				966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */,
 				966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */,
