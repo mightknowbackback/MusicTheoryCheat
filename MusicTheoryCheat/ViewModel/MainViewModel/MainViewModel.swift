@@ -15,7 +15,7 @@ extension ViewModel {
     var primaryNearKeySharpLabelString : String {self.model.currentKey.nearKeySharp.noteStringCased}
     var relativeKeyLabelString : String {self.model.currentKey.relativeKey.name}
     var relativeNearKeyFlatLabelString : String {self.model.currentKey.relativeKey.nearKeyFlat.noteStringCased}
-    var relativeNearKeySharpLabelString : String {self.model.currentKey.relativeKey.noteStringCased}
+    var relativeNearKeySharpLabelString : String {self.model.currentKey.relativeKey.nearKeySharp.noteStringCased}
     
     func chordNoteStrings(forScaleDegree i: Int) -> [String] {
         let pitches : [PitchClass] = self.model.currentKey.chordForScaleDegree(i)

@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct InfoDetailView<Presenting>: View where Presenting : View {
+struct InfoDetailView<BaseView>: View where BaseView : View {
     let infoKey : InfoKey
     let isShowing : Binding<Bool>
-    let presenting : () -> Presenting
+    let baseView : BaseView
     var body: some View {
         ZStack {
-            self.presenting().allowsHitTesting(false)
+            self.baseView.allowsHitTesting(false)
             VStack {
                 Text(self.infoKey.rawValue.uppercased()).padding()
                 Text(Info.details[self.infoKey.rawValue]!).padding()
@@ -34,8 +34,10 @@ extension View {
     func showInfoView(_ isShowing: Binding<Bool>, withInfoKey infoKey: InfoKey) -> some View {
         if isShowing.wrappedValue {
             return AnyView(ZStack {
-                InfoDetailView(infoKey: infoKey, isShowing: isShowing,
-                               presenting: { self })
+                InfoDetailView(
+                    infoKey: infoKey,
+                    isShowing: isShowing,
+                    baseView: self)
             })
         } else {
             return AnyView(self)

@@ -9,5 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CustomColors {
+    
     static let primaryLightUI : UIColor = UIColor(named: "primaryLight")!
+    
 }

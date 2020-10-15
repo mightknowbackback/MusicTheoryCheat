@@ -15,7 +15,7 @@ import Foundation
  10/09/20 - 4 hrs
  10/12/20 - 3 hrs
  10/13/20 - 6 hrs
- 10/14/20 - 5 hrs
+ 10/14/20 - 7 hrs
  
  DESIGN:
  10/05/20 - 8 hrs

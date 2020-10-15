@@ -104,8 +104,8 @@ struct Key : Equatable {
     }
     func chordForScaleDegree(_ i: Int) -> [PitchClass] {
         let root = self.scale[i]
-        let third = i + 2 > 6 ? self.scale[i - 4] : self.scale[i + 2]
-        let fifth = i + 4 > 6 ? self.scale[i - 2] : self.scale[i + 4]
+        let third = i - 5 < 0 ? self.scale[i + 2] : self.scale[i - 5]
+        let fifth = i - 3 < 0 ? self.scale[i + 4] : self.scale[i - 3]
         let seventh = i - 1 < 0 ? self.scale[i + 6] : self.scale[i - 1]
         return [root, third, fifth, seventh]
     }
@@ -114,17 +114,22 @@ struct Key : Equatable {
         let tonality : Tonality = self.tonality == .major ? .minor : .major
         let direction : PitchDirection = self.tonality == .major ? .down : .up
         let keyCenter = self.keyCenter.pitchClassFor(3, stepsInDirection: direction)
-        return Key(keyCenter: keyCenter, tonality: tonality)
+        var key = Key(keyCenter: keyCenter, tonality: tonality)
+        key.preferSharpSpelling = self.preferSharpSpelling
+        return key
     }
     // Related key with one more sharp (ex. G for key of C)
     var nearKeySharp : Key {
         let keyCenter = self.keyCenter.pitchClassFor(5, stepsInDirection: .down)
-        return Key(keyCenter: keyCenter, tonality: self.tonality)
+        var key = Key(keyCenter: keyCenter, tonality: self.tonality)
+        key.preferSharpSpelling = self.preferSharpSpelling
+        return key
     }
     // Related key with one more flat (ex. F for key of C)
     var nearKeyFlat : Key {
         let keyCenter = self.keyCenter.pitchClassFor(5, stepsInDirection: .up)
-        return Key(keyCenter: keyCenter, tonality: self.tonality)
+        let key = Key(keyCenter: keyCenter, tonality: self.tonality)
+        return key
     }
     
 }

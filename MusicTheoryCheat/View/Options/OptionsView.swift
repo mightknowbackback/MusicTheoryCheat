@@ -59,8 +59,7 @@ struct OptionsView: View {
                 
             }
         }
-        //.navigationBarItems(trailing: )
-        //.showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
+        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
             leading: Button(

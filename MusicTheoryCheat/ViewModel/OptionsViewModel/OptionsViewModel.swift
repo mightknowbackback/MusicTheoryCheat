@@ -17,7 +17,6 @@ extension ViewModel {
                 self.model.featuredTonalityIndex = i
                 self.model.currentKeyIndex = self.model.currentKey.relativeKey.keyCenter.rawValue
                 self.model.saveOptions()
-                self.printInfo()
                 print(self.model.currentKey.name)
         })
     }
@@ -28,7 +27,6 @@ extension ViewModel {
             set: {i in
                 self.model.keySelectionMethodIndex = i
                 self.model.saveOptions()
-                self.printInfo()
         })
     }
     
@@ -38,7 +36,6 @@ extension ViewModel {
             set: {i in
                 self.model.symbolTypeIndex = i
                 self.model.saveOptions()
-                self.printInfo()
         })
     }
     
@@ -48,7 +45,6 @@ extension ViewModel {
             set: {i in
                 self.model.preferredSpellingIndex = i
                 self.model.saveOptions()
-                self.printInfo()
         })
     }
     

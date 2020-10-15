@@ -67,6 +67,7 @@ struct MainView: View {
                 Spacer()
                 
             }
+            .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
             .navigationBarItems(
                 leading: Button(action: {self.viewModel.showInfoClickables.toggle()}) {
                     Text("Info")
@@ -78,8 +79,6 @@ struct MainView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        // TODO: DEBUG - This causes OptionsView to be dismissed when the InfoDetailView appears over that view.
-        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
     }
 }
 

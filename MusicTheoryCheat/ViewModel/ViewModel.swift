@@ -29,11 +29,4 @@ class ViewModel : ObservableObject {
         "F" + sharpSymbol + "Major / D" + sharpSymbol + "minor"
     ]
     
-    //MARK: FOR TESTING ONLY!!!
-    func printInfo() {
-        print("")
-        print("Key is \(self.model.currentKey.name)")
-        print(self.model)
-        print("")
-    }
 }

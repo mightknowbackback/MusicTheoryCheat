@@ -96,10 +96,4 @@ struct Model : Codable {
     init() {
         self.load()
     }
-    
-    // MARK: FOR TESTING ONLY!!!
-    func printValues() {
-        print()
-    }
-    
 }
