@@ -78,11 +78,8 @@ struct MainView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
-            self.viewModel.showInfoClickables = false
-        }
         // TODO: DEBUG - This causes OptionsView to be dismissed when the InfoDetailView appears over that view.
-//        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
+        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
     }
 }
 

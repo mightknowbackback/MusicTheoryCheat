@@ -60,10 +60,17 @@ struct OptionsView: View {
             }
         }
         //.navigationBarItems(trailing: )
-        .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
+        //.showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
-            leading: Button(action: {self.presentationMode.wrappedValue.dismiss()}) {Text("Back")},
+            leading: Button(
+                action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    self.viewModel.showInfoClickables = false
+                }
+            ) {Text("Back")
+                
+            },
             trailing: Button(action: {self.viewModel.showInfoClickables.toggle()}) {Text("Info")})
         .navigationTitle("OPTIONS")
         .onAppear {

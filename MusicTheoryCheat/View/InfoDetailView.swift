@@ -19,7 +19,6 @@ struct InfoDetailView<Presenting>: View where Presenting : View {
                 Text(Info.details[self.infoKey.rawValue]!).padding()
                 Button(action: {
                         self.isShowing.wrappedValue = false
-                    
                 }) {
                     Text("Done").padding()
                 }
@@ -49,7 +48,7 @@ struct InfoDetailView_Previews: PreviewProvider {
     static var isShowing : Binding<Bool> = Binding<Bool>(get: {return true}, set: {_ in})
     static let viewModel = ViewModel()
     static var previews: some View {
-        MainView().showInfoView(Self.isShowing, withInfoKey: Self.viewModel.infoKey)
+        MainView().environmentObject(Self.viewModel).showInfoView(Self.isShowing, withInfoKey: Self.viewModel.infoKey)
     }
 }
 
