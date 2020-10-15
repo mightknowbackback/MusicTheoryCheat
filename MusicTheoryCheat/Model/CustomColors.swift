@@ -11,5 +11,6 @@ import SwiftUI
 struct CustomColors {
     
     static let primaryLightUI : UIColor = UIColor(named: "primaryLight")!
+    static let primaryLightSwift : Color = Color(Self.primaryLightUI)
     
 }

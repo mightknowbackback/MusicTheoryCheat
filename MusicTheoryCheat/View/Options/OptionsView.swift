@@ -15,7 +15,7 @@ struct OptionsView: View {
     var body: some View {
         Form {
             Section {
-                
+                // MARK: KEY SELECTION METHOD
                 OptionsTitle(infoKey: InfoKey.allCases[0])
                 
                 Picker("", selection: self.viewModel.keySelectionBinding) {
@@ -26,7 +26,7 @@ struct OptionsView: View {
                 
             }
             Section {
-                
+                // MARK: FEATURED TONALITY
                 OptionsTitle(infoKey: InfoKey.allCases[1])
                 
                 Picker("", selection: self.viewModel.featuredTonalityBinding) {
@@ -37,7 +37,7 @@ struct OptionsView: View {
                 
             }
             Section {
-                
+                // MARK: NUMBERING TYPE
                 OptionsTitle(infoKey: InfoKey.allCases[2])
                 
                 Picker("", selection: self.viewModel.symbolTypeBinding) {
@@ -48,7 +48,7 @@ struct OptionsView: View {
                 
             }
             Section {
-                
+                // MARK: PREFERRED ENHARMONIC SPELLING
                 OptionsTitle(infoKey: InfoKey.allCases[3])
                 
                 Picker("", selection: self.viewModel.preferredSpellingBinding) {
@@ -56,7 +56,7 @@ struct OptionsView: View {
                         Text(self.viewModel.preferredSpellingStrings[i])
                     }
                 }.pickerStyle(SegmentedPickerStyle())
-                
+                // TODO: ADD 'SHOW SEVENTH CHORDS'
             }
         }
         .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)

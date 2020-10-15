@@ -34,6 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func windowScene(_ windowScene: UIWindowScene, didUpdate previousCoordinateSpace: UICoordinateSpace, interfaceOrientation previousInterfaceOrientation: UIInterfaceOrientation, traitCollection previousTraitCollection: UITraitCollection) {
         
+        // Detect and handle view orientation change
         let width = windowScene.screen.bounds.width
         let height = windowScene.screen.bounds.height
         let orientation : ScreenOrientation = width < height ? .portrait : .landscape

@@ -13,6 +13,7 @@ struct KeyPickerView: View {
     
     var body: some View {
         VStack {
+            // Flats/Sharps labels for .byAccidentals
             if self.viewModel.model.keySelectionMethod == .byAccidentals {
                 HStack {
                     Text("Flats")
@@ -20,6 +21,7 @@ struct KeyPickerView: View {
                     Text("Sharps")
                 }
             }
+            // Selector buttons
             Picker("", selection: self.viewModel.keyBinding) {
                 ForEach(0..<self.viewModel.pickerStrings.count) {i in
                     Text(self.viewModel.pickerStrings[i])

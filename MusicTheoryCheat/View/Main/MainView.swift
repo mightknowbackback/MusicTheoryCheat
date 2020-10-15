@@ -15,11 +15,11 @@ struct MainView: View {
         NavigationView {
             
             VStack {
-                
+                // MARK: Key Picker
                 Spacer()
                 KeyPickerView()
                 Spacer()
-                
+                // MARK: Main Key Row (Chart Header)
                 HStack {
                     
                     NearKeyLabel(text: self.viewModel.primaryNearKeyFlatLabelString, infoKey: InfoKey.allCases[6])
@@ -30,7 +30,7 @@ struct MainView: View {
                     
                 }.padding()
                 Spacer()
-                
+                // MARK: Chord Rows
                 VStack {
                     
                     ForEach(0..<self.viewModel.featuredKeyScaleDegreeStrings.count) {i in
@@ -55,6 +55,7 @@ struct MainView: View {
                 }
                 
                 Spacer()
+                // MARK: Relative Key Row (Chart Footer)
                 HStack {
                     
                     NearKeyLabel(text: self.viewModel.relativeNearKeyFlatLabelString, infoKey: InfoKey.allCases[51])

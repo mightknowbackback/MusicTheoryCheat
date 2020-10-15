@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// View that is clickable for more information.
 protocol InfoDisplayable : View {
     var isShowingQuestionMark : Binding<Bool> {get}
     var infoKey : InfoKey {get}
@@ -28,6 +29,7 @@ extension InfoDisplayable {
     }
 }
 
+// Displays the actual appearance of the InfoDisplayable when it is ready to be clicked.
 protocol InfoRequestDisplay : View {
     
     var viewModel : ViewModel {get}
