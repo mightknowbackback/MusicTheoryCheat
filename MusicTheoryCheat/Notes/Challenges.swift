@@ -12,6 +12,8 @@ import Foundation
  
  Bug for Implementation of InfoDetailView that causes OptionsView to dismiss itself when InfoDetailView is presented.
  
+ Protocols for InfoDetailView
+ 
  Correct display of all accidentals, enharmonics, relative to selected key, relative key, near keys, scale degrees, etc.
  
  */

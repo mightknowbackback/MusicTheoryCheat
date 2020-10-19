@@ -18,6 +18,9 @@ struct Key : Equatable {
     static func == (lhs: Key, rhs: Key) -> Bool {
         return rhs.keyCenter == lhs.keyCenter && rhs.tonality == lhs.tonality
     }
+    static func ~= (lhs: Key, rhs: Key) -> Bool {
+        return lhs == rhs || lhs == rhs.relativeKey
+    }
     
     // MARK: Naming
     var noteString : String {

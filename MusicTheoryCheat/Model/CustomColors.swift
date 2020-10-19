@@ -13,4 +13,10 @@ struct CustomColors {
     static let primaryLightUI : UIColor = UIColor(named: "primaryLight")!
     static let primaryLightSwift : Color = Color(Self.primaryLightUI)
     
+    static let grayUI : UIColor = UIColor(named: "gray")!
+    static let graySwift : Color = Color(Self.grayUI)
+    
+    static let accentUI : UIColor = UIColor(named: "accent")!
+    static let accentSwift : Color = Color(Self.accentUI)
+    
 }

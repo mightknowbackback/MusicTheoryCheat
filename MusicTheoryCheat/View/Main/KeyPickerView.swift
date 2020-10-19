@@ -10,24 +10,53 @@ import SwiftUI
 struct KeyPickerView: View {
     
     @EnvironmentObject var viewModel : ViewModel
+    let accidentalLabelsFont : Font = .custom(fontStrings[24], size: 14)
+    
+    private func multiplier(for spelling: KeySpelling) -> CGFloat {
+        switch self.viewModel.model.keySelectionMethod {
+        case .byAccidentals:
+            let single : CGFloat = 1/12
+            if self.viewModel.model.preferredSpelling == spelling {
+                return single * 6
+            } else {
+                return single * 5
+            }
+        default:
+            return 0.5
+        }
+    }
     
     var body: some View {
-        VStack {
-            // Flats/Sharps labels for .byAccidentals
-            if self.viewModel.model.keySelectionMethod == .byAccidentals {
-                HStack {
-                    Text("Flats")
-                    Spacer()
-                    Text("Sharps")
+        
+        VStack(spacing: 4) {
+            
+            HStack(spacing: 4) {
+                ForEach(0..<self.viewModel.pickerStrings.count) {i in
+                    Button(action: {self.viewModel.keyBinding.wrappedValue = i}) {
+                        ZStack {
+                            if self.viewModel.keyBinding.wrappedValue == i {
+                                CustomColors.accentSwift.clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).padding(-3)
+                                
+                            } else {
+                                (CustomColors.graySwift).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                                
+                            }
+                            Text(self.viewModel.pickerStrings[i]).padding(8).foregroundColor(Color.white).font(CustomFonts.keyPicker)
+                        }
+                    }
                 }
             }
-            // Selector buttons
-            Picker("", selection: self.viewModel.keyBinding) {
-                ForEach(0..<self.viewModel.pickerStrings.count) {i in
-                    Text(self.viewModel.pickerStrings[i])
+            // Flats/Sharps labels for .byAccidentals
+            GeometryReader {geometry in
+                HStack {
+                    Text("Flats").padding(4).frame(width: geometry.size.width*self.multiplier(for: .flats)).background(self.viewModel.flatsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
+                    Spacer()
+                    Text("Sharps").padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
                 }
-            }.pickerStyle(SegmentedPickerStyle())
-        }
+            }
+            
+        }.padding([.bottom, .leading, .trailing])
+        
         
     }
 }

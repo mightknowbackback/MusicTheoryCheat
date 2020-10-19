@@ -61,7 +61,7 @@ extension ViewModel {
         return array
     }
     
-    // MARK: Binding
+    // MARK: Selection Binding
     private func keyBindingGetter() -> Int {
         self.keyOrder.firstIndex(of: self.model.currentKey.keyCenter)!
     }
@@ -74,6 +74,26 @@ extension ViewModel {
         Binding<Int>(
             get: self.keyBindingGetter,
             set: self.keyBindingSetter)
+    }
+    
+    // MARK: Accidental Labels
+    private func colorFor(_ spelling: KeySpelling) -> Color {
+        if self.model.currentKey ~= Key(keyCenter: .c, tonality: .major) {
+            return CustomColors.graySwift
+        } else {
+            switch spelling == self.model.currentKey.spelling {
+            case true:
+                return CustomColors.accentSwift
+            case false:
+                return CustomColors.graySwift
+            }
+        }
+    }
+    var flatsColor : Color {
+        self.colorFor(.flats)
+    }
+    var sharpsColor : Color {
+        self.colorFor(.sharps)
     }
     
 }
