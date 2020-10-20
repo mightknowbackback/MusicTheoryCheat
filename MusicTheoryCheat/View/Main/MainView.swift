@@ -31,7 +31,6 @@ struct MainView: View {
                                 HStack(spacing: 0) {
                                     
                                     ScaleDegreeLabel(text: self.viewModel.featuredKeyScaleDegreeStrings[i], infoKey: InfoKey.allCases[(i * 6) + 9]).frame(maxWidth: .infinity)
-                                    
                                     ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[0], infoKey: InfoKey.allCases[(i * 6) + 10]).frame(maxWidth: .infinity)
                                     
                                     ChordToneLabel(text: self.viewModel.chordNoteStrings(forScaleDegree: i)[1], infoKey: InfoKey.allCases[(i * 6) + 11]).frame(maxWidth: .infinity)
@@ -53,8 +52,6 @@ struct MainView: View {
                 }.layoutPriority(1)
                 
             }
-                
-                
             .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
             .navigationBarItems(
                 leading: Button(action: {self.viewModel.showInfoClickables.toggle()}) {

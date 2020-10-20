@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct PrimaryKeyBackgroundShape: View {
+    
+    @EnvironmentObject var viewModel : ViewModel
+    
+    var columnCount : CGFloat {
+        self.viewModel.model.showSevenths ? 6 : 5
+    }
+    
     private let topThickness : CGFloat = Dimensions.keyLabel + Dimensions.keyLabelPadding*2
     private func insideCornerRadius(for frame: CGRect) -> CGFloat {
         let fullHeight = frame.height
@@ -20,7 +27,7 @@ struct PrimaryKeyBackgroundShape: View {
         GeometryReader {proxy in
             Path {p in
                 let frame = proxy.frame(in: .local)
-                let sideWidth = frame.width/6
+                let sideWidth = frame.width / self.columnCount
                 let insideRadius = self.insideCornerRadius(for: frame)
                 p.addArc(center: CGPoint(x: self.topThickness, y: self.topThickness), radius: self.topThickness, startAngle: Angle(radians: .pi), endAngle: Angle(radians: .pi*1.5), clockwise: false)
                 p.addArc(center: CGPoint(x: frame.maxX - self.topThickness/2, y: self.topThickness/2), radius: self.topThickness/2, startAngle: Angle(radians: .pi*1.5), endAngle: Angle(radians: .pi*0.5), clockwise: false)

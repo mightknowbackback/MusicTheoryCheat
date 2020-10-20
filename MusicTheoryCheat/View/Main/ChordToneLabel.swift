@@ -10,7 +10,7 @@ import SwiftUI
 struct ChordToneNormalView : View {
     let text : String
     var body: some View {
-        Text(self.text)
+        Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
     }
 }
 struct ChordToneQuestionMark : View {
