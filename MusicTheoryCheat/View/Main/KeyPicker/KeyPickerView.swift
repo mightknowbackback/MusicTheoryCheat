@@ -47,9 +47,9 @@ struct KeyPickerView: View {
                     Spacer()
                     Text(self.viewModel.sharpsString).shadow(radius: 6).padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(CustomFonts.keyPickerAcidentalLabel)
                 }
-            }
+            }.frame(height: 32)
             
-        }.padding([.bottom, .leading, .trailing])
+        }.padding([.leading, .trailing])
         
         
     }

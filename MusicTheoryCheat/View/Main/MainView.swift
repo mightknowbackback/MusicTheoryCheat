@@ -20,7 +20,7 @@ struct MainView: View {
                 VStack {
                     // MARK: Main Key Row (Chart Header)
                     KeyLabelRow(textForFlatKey: self.viewModel.primaryNearKeyFlatLabelString, main: self.viewModel.primaryKeyLabelString, sharp: self.viewModel.primaryNearKeySharpLabelString)
-                    Spacer()
+                    
                     // MARK: Chord Rows
                     VStack {
                         
@@ -44,13 +44,8 @@ struct MainView: View {
                             }.frame(maxHeight: .infinity)
                         }
                     }
-                    
-                    Spacer()
                     // MARK: Relative Key Row (Chart Footer)
                     KeyLabelRow(textForFlatKey: self.viewModel.relativeNearKeyFlatLabelString, main: self.viewModel.relativeKeyLabelString, sharp: self.viewModel.relativeNearKeySharpLabelString, isMain: false)
-                    
-                    Spacer()
-                    
                 }.layoutPriority(1)
             }
                 
