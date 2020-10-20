@@ -77,6 +77,7 @@ extension ViewModel {
     }
     
     // MARK: Accidental Labels
+    // COLOR
     private func colorFor(_ spelling: KeySpelling) -> Color {
         if self.model.currentKey ~= Key(keyCenter: .c, tonality: .major) {
             return CustomColors.graySwift
@@ -95,5 +96,35 @@ extension ViewModel {
     var sharpsColor : Color {
         self.colorFor(.sharps)
     }
-    
+    // TEXT
+    private var accidentalsString : String {
+        var result = ""
+        let arr = self.model.currentKey.accidentals
+        if arr.isEmpty {
+            result = " none"
+        } else {
+            for a in  arr {
+                result.append(" \(a)")
+            }
+        }
+        return result
+    }
+    var flatsString : String {
+        var string = "flats :"
+        if self.model.currentKey.spelling == .flats {
+            string.append(self.accidentalsString)
+        } else {
+            string.append(" none")
+        }
+        return string
+    }
+    var sharpsString : String {
+        var string = "sharps :"
+        if self.model.currentKey.spelling == .sharps {
+            string.append(self.accidentalsString)
+        } else {
+            string.append(" none")
+        }
+        return string
+    }
 }

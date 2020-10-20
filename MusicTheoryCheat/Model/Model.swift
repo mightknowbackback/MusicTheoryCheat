@@ -40,7 +40,7 @@ struct Model : Codable {
     var featuredTonality : Tonality {
         Tonality.all[self.featuredTonalityIndex]
     }
-    var keySelectionMethodIndex : Int = 0
+    var keySelectionMethodIndex : Int = 1
     var keySelectionMethod : KeySelectionMethod {
         KeySelectionMethod.all[self.keySelectionMethodIndex]
     }

@@ -97,6 +97,26 @@ struct Key : Equatable {
     }
     
     // MARK: Key Information
+    // Accidentals
+    private let flatsOrder : [String] = ["B", "E", "A", "D", "G", "C", "F"]
+    private let sharpsOrder : [String] = ["F", "C", "G", "D", "A", "E", "B"]
+    var accidentals : [String] {
+        var result : [String] = []
+        var lastIndex = -1
+        var testKey = Key(keyCenter: .c, tonality: .major)
+        let amt : Int = self.spelling == .flats ? 5 : 7
+        let all : [String] = self.spelling == .flats ? self.flatsOrder : self.sharpsOrder
+        while !(testKey ~= self) {
+            lastIndex += 1
+            testKey = Key(keyCenter: testKey.keyCenter.pitchClassFor(amt, stepsInDirection: .up), tonality: .major)
+        }
+        if lastIndex != -1 {
+            for i in 0...lastIndex {
+                result.append(all[i])
+            }
+        }
+        return result
+    }
     // Diatonic scale from root
     var scale : [PitchClass] {
         var array : [PitchClass] = []

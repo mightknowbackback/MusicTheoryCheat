@@ -31,6 +31,8 @@
 		966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86D6252D55F70026431C /* KeyPickerView.swift */; };
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
+		968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */; };
+		968AF44A253E45F200CAA3C1 /* FontText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF449253E45F200CAA3C1 /* FontText.swift */; };
 		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
 		96B5068C2537822900D86A0D /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5068B2537822900D86A0D /* Challenges.swift */; };
@@ -89,6 +91,8 @@
 		966B86C9252D3DAD0026431C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerButtonLabel.swift; sourceTree = "<group>"; };
+		968AF449253E45F200CAA3C1 /* FontText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontText.swift; sourceTree = "<group>"; };
 		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
 		96B50686253770F600D86A0D /* NearKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearKeyLabel.swift; sourceTree = "<group>"; };
 		96B5068B2537822900D86A0D /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				960DE5922523E878003C724F /* Functionality.swift */,
 				96B506812536A99B00D86A0D /* HourlyLog.swift */,
 				96B5068B2537822900D86A0D /* Challenges.swift */,
+				968AF449253E45F200CAA3C1 /* FontText.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			children = (
 				966B86EB252D73260026431C /* MainView.swift */,
 				966B86D6252D55F70026431C /* KeyPickerView.swift */,
+				968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */,
 				96B50686253770F600D86A0D /* NearKeyLabel.swift */,
 				96B506902537877800D86A0D /* MainKeyLabel.swift */,
 				96B506952537A0F000D86A0D /* ScaleDegreeLabel.swift */,
@@ -418,8 +424,10 @@
 				96B506A02537BA7F00D86A0D /* CustomColors.swift in Sources */,
 				96B506962537A0F000D86A0D /* ScaleDegreeLabel.swift in Sources */,
 				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
+				968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */,
+				968AF44A253E45F200CAA3C1 /* FontText.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
 				966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */,
 				966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */,

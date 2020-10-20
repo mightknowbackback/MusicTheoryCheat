@@ -33,15 +33,10 @@ struct KeyPickerView: View {
             HStack(spacing: 4) {
                 ForEach(0..<self.viewModel.pickerStrings.count) {i in
                     Button(action: {self.viewModel.keyBinding.wrappedValue = i}) {
-                        ZStack {
-                            if self.viewModel.keyBinding.wrappedValue == i {
-                                CustomColors.accentSwift.clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).padding(-3)
-                                
-                            } else {
-                                (CustomColors.graySwift).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                                
-                            }
-                            Text(self.viewModel.pickerStrings[i]).padding(8).foregroundColor(Color.white).font(CustomFonts.keyPicker)
+                        if self.viewModel.keyBinding.wrappedValue == i {
+                            KeyPickerButtonLabel(self.viewModel.pickerStrings[i], color: CustomColors.accentSwift, padding: -3)
+                        } else {
+                            KeyPickerButtonLabel(self.viewModel.pickerStrings[i])
                         }
                     }
                 }
@@ -49,9 +44,9 @@ struct KeyPickerView: View {
             // Flats/Sharps labels for .byAccidentals
             GeometryReader {geometry in
                 HStack {
-                    Text("Flats").padding(4).frame(width: geometry.size.width*self.multiplier(for: .flats)).background(self.viewModel.flatsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
+                    Text(self.viewModel.flatsString).padding(4).frame(width: geometry.size.width*self.multiplier(for: .flats)).background(self.viewModel.flatsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
                     Spacer()
-                    Text("Sharps").padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
+                    Text(self.viewModel.sharpsString).padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
                 }
             }
             

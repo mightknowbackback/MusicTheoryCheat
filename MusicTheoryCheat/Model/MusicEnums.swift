@@ -37,10 +37,10 @@ enum PitchClass : Int {
         return PitchClass.pitchClassBy(noteNumber: newNum)
     }
     // String for note name, with enharmonic spelling options
-    func stringLiteral(inKey key: PitchClass? = nil, withKeySpelling spelling: KeySpelling = .flats) -> String {
+    func stringLiteral(inKey key: Key? = nil, withKeySpelling spelling: KeySpelling = .flats) -> String {
         var noteName : String = ""
         let accidental : String = spelling == .flats ? flatSymbol : sharpSymbol
-        let k : PitchClass = key == nil ? self : key!
+        //let k : PitchClass = key == nil ? self : key!
         var result : String = ""
         switch self {
         case .c:
@@ -55,8 +55,9 @@ enum PitchClass : Int {
             noteName = "E"
         case .f:
             noteName = "F"
-            if k == .gFlat && spelling == .sharps {
-                noteName = "E" + accidental
+            let k = Key(keyCenter: .gFlat, tonality: .major)
+            if k ~= key && spelling == .sharps {
+                noteName = "E" + sharpSymbol
             }
         case .gFlat:
             noteName = spelling == .flats ? "G" : "F"
@@ -70,8 +71,9 @@ enum PitchClass : Int {
             noteName = spelling == .flats ? "B" : "A"
         case.b:
             noteName = "B"
-            if k == .gFlat && spelling == .flats {
-                noteName = "C" + accidental
+            let k = Key(keyCenter: .gFlat, tonality: .major)
+            if k ~= key && spelling == .flats {
+                noteName = "C" + flatSymbol
             }
         }
         switch self {
@@ -97,7 +99,7 @@ enum PitchDirection {
     case up, down
 }
 // For enharmonic spelling preference of individual notes, and for keeping spelling uniform within a key
-enum KeySpelling {
+enum KeySpelling : String {
     case flats, sharps
     static var all : [KeySpelling] = [.flats, .sharps]
 }

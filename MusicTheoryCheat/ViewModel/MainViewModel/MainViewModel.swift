@@ -20,7 +20,7 @@ extension ViewModel {
     func chordNoteStrings(forScaleDegree i: Int) -> [String] {
         let pitches : [PitchClass] = self.model.currentKey.chordForScaleDegree(i)
         let spelling = self.model.currentKey.spelling
-        return pitches.map {$0.stringLiteral(withKeySpelling: spelling)}
+        return pitches.map {$0.stringLiteral(inKey: self.model.currentKey, withKeySpelling: spelling)}
     }
     private var majorScaleDegreeStrings : [String] {
         let b = self.model.featuredTonality == .major

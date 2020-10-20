@@ -14,17 +14,18 @@ class MusicTheoryCheatTests: XCTestCase {
         
         let eSharpString = "E" + sharpSymbol
         let f : PitchClass = .f
-        XCTAssertEqual(f.stringLiteral(inKey: .gFlat, withKeySpelling: .sharps), eSharpString)
+        let key = Key(keyCenter: .gFlat, tonality: .major)
+        XCTAssertEqual(f.stringLiteral(inKey: key, withKeySpelling: .sharps), eSharpString)
         
         let fString = "F"
-        XCTAssertEqual(f.stringLiteral(inKey: .gFlat, withKeySpelling: .flats), fString)
+        XCTAssertEqual(f.stringLiteral(inKey: key, withKeySpelling: .flats), fString)
         
         let cFlatString = "C" + flatSymbol
         let b : PitchClass = .b
-        XCTAssertEqual(b.stringLiteral(inKey: .gFlat), cFlatString)
+        XCTAssertEqual(b.stringLiteral(inKey: key), cFlatString)
         
         let bString = "B"
-        XCTAssertEqual(b.stringLiteral(inKey: .gFlat, withKeySpelling: .sharps), bString)
+        XCTAssertEqual(b.stringLiteral(inKey: key, withKeySpelling: .sharps), bString)
         
         let fSharpString = "F" + sharpSymbol
         let fSharp : PitchClass = .gFlat
@@ -32,6 +33,21 @@ class MusicTheoryCheatTests: XCTestCase {
         
         let gFlatString = "G" + flatSymbol
         XCTAssertEqual(fSharp.stringLiteral(withKeySpelling: .flats), gFlatString)
+        
+    }
+    func testKeyAccidentalArray() {
+        
+        let gFlatMajor = Key(keyCenter: .gFlat, tonality: .major)
+        let gFlatMajorAccidentals : [String] = ["B", "E", "A", "D", "G", "C"]
+        XCTAssertEqual(gFlatMajor.accidentals, gFlatMajorAccidentals)
+        
+        let fSharpMajor = Key(keyCenter: .gFlat, tonality: .major, preferSharpSpelling: true)
+        let fSharpMajorAccidentals : [String] = ["F", "C", "G", "D", "A", "E"]
+        XCTAssertEqual(fSharpMajor.accidentals, fSharpMajorAccidentals)
+        
+        let gMinor = Key(keyCenter: .g, tonality: .minor)
+        let gMinorAccidentals : [String] = ["B", "E"]
+        XCTAssertEqual(gMinor.accidentals, gMinorAccidentals)
         
     }
     
