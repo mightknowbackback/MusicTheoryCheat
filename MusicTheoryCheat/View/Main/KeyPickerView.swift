@@ -10,7 +10,6 @@ import SwiftUI
 struct KeyPickerView: View {
     
     @EnvironmentObject var viewModel : ViewModel
-    let accidentalLabelsFont : Font = .custom(fontStrings[24], size: 14)
     
     private func multiplier(for spelling: KeySpelling) -> CGFloat {
         switch self.viewModel.model.keySelectionMethod {
@@ -29,7 +28,7 @@ struct KeyPickerView: View {
     var body: some View {
         
         VStack(spacing: 4) {
-            
+            // Main picker
             HStack(spacing: 4) {
                 ForEach(0..<self.viewModel.pickerStrings.count) {i in
                     Button(action: {self.viewModel.keyBinding.wrappedValue = i}) {
@@ -41,12 +40,12 @@ struct KeyPickerView: View {
                     }
                 }
             }
-            // Flats/Sharps labels for .byAccidentals
+            // Flats/Sharps labels
             GeometryReader {geometry in
                 HStack {
-                    Text(self.viewModel.flatsString).padding(4).frame(width: geometry.size.width*self.multiplier(for: .flats)).background(self.viewModel.flatsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
+                    Text(self.viewModel.flatsString).shadow(radius: 6).padding(4).frame(width: geometry.size.width*self.multiplier(for: .flats)).background(self.viewModel.flatsColor).clipShape(Capsule()).foregroundColor(Color.white).font(CustomFonts.keyPickerAcidentalLabel)
                     Spacer()
-                    Text(self.viewModel.sharpsString).padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(self.accidentalLabelsFont)
+                    Text(self.viewModel.sharpsString).shadow(radius: 6).padding(4).frame(width: geometry.size.width*self.multiplier(for: .sharps)).background(self.viewModel.sharpsColor).clipShape(Capsule()).foregroundColor(Color.white).font(CustomFonts.keyPickerAcidentalLabel)
                 }
             }
             

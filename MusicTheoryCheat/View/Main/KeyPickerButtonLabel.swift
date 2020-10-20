@@ -14,15 +14,15 @@ struct KeyPickerButtonLabel: View {
     var accidental : String?
     let padding : CGFloat
     let color : Color
-    let mainFont : Font = CustomFonts.keyPicker
-    let symbolFont : Font = CustomFonts.symbolFont
+    let mainFont : Font = CustomFonts.keyPickerLetter
+    let symbolFont : Font = CustomFonts.keyPickersymbol
     
     var body: some View {
         ZStack {
             self.color.clipShape(Circle()).padding(self.padding)
-            Text(self.letter).font(self.mainFont).padding(8)
+            Text(self.letter).font(self.mainFont).shadow(radius: 4).padding(8)
             if let acc = self.accidental {
-                Text(acc).font(self.symbolFont).offset(x: 6, y: -5)
+                Text(acc).font(self.symbolFont).shadow(radius: 4).offset(x: 6, y: -4)
             }
         }.foregroundColor(.white)
     }

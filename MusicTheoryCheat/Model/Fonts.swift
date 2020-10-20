@@ -12,8 +12,9 @@ struct CustomFonts {
     
     static let one : Font = .custom(fontStrings[1], size: 12)
     
-    static let keyPicker : Font = .custom(fontStrings[123], size: 14)
-    static let symbolFont : Font = .custom(fontStrings[18], size: 12)
+    static let keyPickerLetter : Font = .custom(fontStrings[123], size: 14)
+    static let keyPickersymbol : Font = .custom(fontStrings[18], size: 12)
+    static let keyPickerAcidentalLabel : Font = .custom(fontStrings[123], size: 14)
     
     static func printAll() {
         var i = 0
