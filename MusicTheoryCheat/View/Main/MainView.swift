@@ -19,15 +19,7 @@ struct MainView: View {
                 KeyPickerView()
                 VStack {
                     // MARK: Main Key Row (Chart Header)
-                    HStack {
-                        
-                        NearKeyLabel(text: self.viewModel.primaryNearKeyFlatLabelString, infoKey: InfoKey.allCases[6])
-                        Spacer()
-                        MainKeyLabel(text: self.viewModel.primaryKeyLabelString, infoKey: InfoKey.allCases[7])
-                        Spacer()
-                        NearKeyLabel(text: self.viewModel.primaryNearKeySharpLabelString, infoKey: InfoKey.allCases[8])
-                        
-                    }.padding()
+                    KeyLabelRow(textForFlatKey: self.viewModel.primaryNearKeyFlatLabelString, main: self.viewModel.primaryKeyLabelString, sharp: self.viewModel.primaryNearKeySharpLabelString)
                     Spacer()
                     // MARK: Chord Rows
                     VStack {
@@ -55,15 +47,8 @@ struct MainView: View {
                     
                     Spacer()
                     // MARK: Relative Key Row (Chart Footer)
-                    HStack {
-                        
-                        NearKeyLabel(text: self.viewModel.relativeNearKeyFlatLabelString, infoKey: InfoKey.allCases[51])
-                        Spacer()
-                        MainKeyLabel(text: self.viewModel.relativeKeyLabelString, infoKey: InfoKey.allCases[52])
-                        Spacer()
-                        NearKeyLabel(text: self.viewModel.relativeNearKeySharpLabelString, infoKey: InfoKey.allCases[53])
-                        
-                    }.padding()
+                    KeyLabelRow(textForFlatKey: self.viewModel.relativeNearKeyFlatLabelString, main: self.viewModel.relativeKeyLabelString, sharp: self.viewModel.relativeNearKeySharpLabelString, isMain: false)
+                    
                     Spacer()
                     
                 }.layoutPriority(1)

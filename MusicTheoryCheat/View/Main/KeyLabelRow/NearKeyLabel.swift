@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct NearKeyNormalLabel : View {
-    let text : String
+    let letter : String
+    let accidental : String?
     var body: some View {
-        Text(self.text)
+        ZStack {
+            Color.white
+            ZStack {
+                Text(self.letter).font(CustomFonts.nearKey).padding(8).foregroundColor(CustomColors.accentSwift)
+                if let a = self.accidental {
+                    Text(a).offset(x: 10, y: -6).font(CustomFonts.nearAccidental).padding(8).foregroundColor(CustomColors.accentSwift)
+                }
+                
+            }
+            
+        }.clipShape(Circle()).aspectRatio(1, contentMode: .fit)
+    }
+    init(text: String) {
+        var text = text
+        self.letter = String(text.removeFirst())
+        if let a = text.last {
+            self.accidental = String(a)
+        } else {
+            self.accidental = nil
+        }
     }
 }
 struct NearKeyQuestionMark : View {
     var body: some View {
-        Text("?")
+        NearKeyNormalLabel(text: "?")
     }
 }
 struct NearKeyInfoLabel : InfoRequestDisplay {

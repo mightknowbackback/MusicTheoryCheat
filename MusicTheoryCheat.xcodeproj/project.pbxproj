@@ -33,6 +33,7 @@
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
 		968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */; };
 		968AF44A253E45F200CAA3C1 /* FontText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF449253E45F200CAA3C1 /* FontText.swift */; };
+		968AF454253E89F600CAA3C1 /* KeyLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */; };
 		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
 		96B5068C2537822900D86A0D /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5068B2537822900D86A0D /* Challenges.swift */; };
@@ -93,6 +94,7 @@
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerButtonLabel.swift; sourceTree = "<group>"; };
 		968AF449253E45F200CAA3C1 /* FontText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontText.swift; sourceTree = "<group>"; };
+		968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyLabelRow.swift; sourceTree = "<group>"; };
 		96B506812536A99B00D86A0D /* HourlyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyLog.swift; sourceTree = "<group>"; };
 		96B50686253770F600D86A0D /* NearKeyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearKeyLabel.swift; sourceTree = "<group>"; };
 		96B5068B2537822900D86A0D /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
@@ -221,7 +223,6 @@
 			children = (
 				966B8692252D1BB20026431C /* ViewModel.swift */,
 				966B86A4252D28680026431C /* MainViewModel */,
-				966B86A5252D288B0026431C /* OptionsViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +244,7 @@
 			children = (
 				966B86C9252D3DAD0026431C /* MainViewModel.swift */,
 				966006E0252F8ADA0046024E /* KeyPickerViewModel.swift */,
+				966B86A5252D288B0026431C /* OptionsViewModel */,
 			);
 			path = MainViewModel;
 			sourceTree = "<group>";
@@ -259,10 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				966B86EB252D73260026431C /* MainView.swift */,
-				966B86D6252D55F70026431C /* KeyPickerView.swift */,
-				968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */,
-				96B50686253770F600D86A0D /* NearKeyLabel.swift */,
-				96B506902537877800D86A0D /* MainKeyLabel.swift */,
+				968AF44E253E893600CAA3C1 /* KeyPicker */,
+				968AF44F253E894300CAA3C1 /* KeyLabelRow */,
 				96B506952537A0F000D86A0D /* ScaleDegreeLabel.swift */,
 				96B5069A2537A51000D86A0D /* ChordToneLabel.swift */,
 			);
@@ -276,6 +276,25 @@
 				960AE5062534F078006993A0 /* OptionsTitle.swift */,
 			);
 			path = Options;
+			sourceTree = "<group>";
+		};
+		968AF44E253E893600CAA3C1 /* KeyPicker */ = {
+			isa = PBXGroup;
+			children = (
+				966B86D6252D55F70026431C /* KeyPickerView.swift */,
+				968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */,
+			);
+			path = KeyPicker;
+			sourceTree = "<group>";
+		};
+		968AF44F253E894300CAA3C1 /* KeyLabelRow */ = {
+			isa = PBXGroup;
+			children = (
+				968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */,
+				96B50686253770F600D86A0D /* NearKeyLabel.swift */,
+				96B506902537877800D86A0D /* MainKeyLabel.swift */,
+			);
+			path = KeyLabelRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +454,7 @@
 				966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */,
 				960AE514253500E6006993A0 /* OptionsTitle.swift in Sources */,
 				96B506E7253A3BF600D86A0D /* Fonts.swift in Sources */,
+				968AF454253E89F600CAA3C1 /* KeyLabelRow.swift in Sources */,
 				96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */,
 				965C7A1D253A483C009ED952 /* Constants.swift in Sources */,
 			);

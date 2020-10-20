@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 let appName : String = "Music Theory Cheat"
 let flatSymbol : String = "♭"
@@ -20,4 +21,8 @@ let minorRomanNumerals : [String] = ["i", "ii" + diminishedSymbol, "III", "iv", 
 let minorRomanNumeralsOffset : [String] = Array(minorRomanNumerals[2...6]) + Array(minorRomanNumerals[0...1])
 let majorNashvilleNumbers : [String] = ["1", "2", "3", "4", "5", "6", "7"]
 let minorNashvilleNumbers : [String] = Array(majorNashvilleNumbers[5...6]) + Array(majorNashvilleNumbers[0...4])
+
+struct Dimensions {
+    static let keyLabel : CGFloat = 60
+}
 
