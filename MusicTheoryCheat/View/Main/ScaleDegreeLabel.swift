@@ -10,12 +10,12 @@ import SwiftUI
 struct ScaleDegreeNormalView : View {
     let text : String
     var body: some View {
-        Text(self.text)
+        Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
     }
 }
 struct ScaleDegreeQuestionMark : View {
     var body: some View {
-        Text("?")
+        ScaleDegreeNormalView(text: "?")
     }
 }
 struct ScaleDegreeInfoLabel : InfoRequestDisplay {

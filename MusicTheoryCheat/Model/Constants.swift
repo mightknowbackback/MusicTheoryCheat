@@ -25,5 +25,6 @@ let minorNashvilleNumbers : [String] = Array(majorNashvilleNumbers[5...6]) + Arr
 struct Dimensions {
     static let keyLabel : CGFloat = 60
     static let keyLabelPadding : CGFloat = 12
+    static let gridShapePadding : CGFloat = 8
 }
 
