@@ -155,4 +155,42 @@ struct Key : Equatable {
         return key
     }
     
+    // MARK: Playable Functionality
+    private let lowestNote : UInt8 = 53
+    var playableScale : [UInt8] {
+        var result : [UInt8] = []
+        
+        let scale = self.scale.map {UInt8($0.rawValue) + 48}
+        print("")
+        print(scale)
+        for note in scale {
+            if let previousNote = scale.last {
+                if note < previousNote {
+                    result.append(note + 12)
+                } else {
+                    result.append(note)
+                }
+            } else {
+                result.append(note)
+            }
+        }
+        if result[0] < self.lowestNote {
+            result = result.map {$0 + 12}
+        }
+        print(result)
+        return result
+    }
+    func playableChordFor(scaleDegree: Int) -> [UInt8] {
+        let full = self.playableScale + self.playableScale.map {$0 + 12}
+        let root = full[scaleDegree]
+        return [root]
+    }
+    func playableNoteForChordTone(_ chordTone: Int, withRoot root: Int) -> UInt8 {
+        let full = self.playableScale + self.playableScale.map {$0 + 12}
+        var result = full[chordTone + root]
+        if full[root] >= self.lowestNote + 12 {
+            result -= 12
+        }
+        return result
+    }
 }
