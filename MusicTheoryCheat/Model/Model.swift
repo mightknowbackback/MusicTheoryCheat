@@ -16,7 +16,7 @@ enum NumericSymbolType : String {
     static var all : [NumericSymbolType] = [.romanNumerals, .nashvilleNumbers]
 }
 
-struct Model : Codable {
+struct Model  {
     
     // MARK: Properties
     var featuredTonalityIndex : Int = 0 {
@@ -52,7 +52,7 @@ struct Model : Codable {
     var preferredSpelling : KeySpelling {
         KeySpelling.all[self.preferredSpellingIndex]
     }
-    var showSevenths : Bool = true
+    var showSevenths : Bool = false
     var currentKeyIndex : Int = 0
     var currentKey : Key {
         var key = Key(keyCenter: PitchClass.pitchClassBy(noteNumber: self.currentKeyIndex), tonality: self.featuredTonality)
@@ -61,6 +61,11 @@ struct Model : Codable {
         }
         return key
     }
+    
+    // MARK: Playing Notes
+    private let lowestNote : UInt8 = 53
+    
+    let sequencer : Sequencer
     
     // MARK: Initializing and Storage
     private var keys : [String] = ["featuredTonality", "keySelectionMethod", "symbolType", "preferredSpelling", "currentKey"]
@@ -93,7 +98,16 @@ struct Model : Codable {
             }
         }
     }
+//    func encode(to encoder: Encoder) throws {
+//        self.saveOptions()
+//    }
+//    init(from decoder: Decoder) throws {
+//        self.sequencer = Sequencer(soundPlayer: SoundFontPlayer()!)
+//        self.load()
+//    }
+    
     init() {
+        self.sequencer = Sequencer(soundPlayer: SoundFontPlayer()!)
         self.load()
     }
 }

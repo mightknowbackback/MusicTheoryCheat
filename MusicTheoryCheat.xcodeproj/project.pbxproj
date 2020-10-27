@@ -19,10 +19,11 @@
 		960DE56B2523E84C003C724F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960DE5692523E84C003C724F /* LaunchScreen.storyboard */; };
 		960DE5762523E84C003C724F /* MusicTheoryCheatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5752523E84C003C724F /* MusicTheoryCheatTests.swift */; };
 		960DE5812523E84C003C724F /* MusicTheoryCheatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5802523E84C003C724F /* MusicTheoryCheatUITests.swift */; };
-		960DE5932523E878003C724F /* Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE5922523E878003C724F /* Functionality.swift */; };
 		96430E1C253F7320001FBE1C /* PrimaryKeyBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96430E1B253F7320001FBE1C /* PrimaryKeyBackgroundShape.swift */; };
 		96430E24253F7A76001FBE1C /* KeyBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96430E23253F7A76001FBE1C /* KeyBackgrounds.swift */; };
 		96430E29253F8D5C001FBE1C /* MainGridBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96430E28253F8D5C001FBE1C /* MainGridBackgroundViewModel.swift */; };
+		96430E342547583B001FBE1C /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96430E332547583B001FBE1C /* SoundPlayer.swift */; };
+		96430E3925475949001FBE1C /* Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 96430E3825475949001FBE1C /* Piano.sf2 */; };
 		965C7A1D253A483C009ED952 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C7A1C253A483C009ED952 /* Constants.swift */; };
 		966006E1252F8ADA0046024E /* KeyPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966006E0252F8ADA0046024E /* KeyPickerViewModel.swift */; };
 		966006E92530BA680046024E /* OptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966006E82530BA680046024E /* OptionsViewModel.swift */; };
@@ -35,16 +36,16 @@
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
 		968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */; };
-		968AF44A253E45F200CAA3C1 /* FontText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF449253E45F200CAA3C1 /* FontText.swift */; };
 		968AF454253E89F600CAA3C1 /* KeyLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */; };
-		96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506812536A99B00D86A0D /* HourlyLog.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
-		96B5068C2537822900D86A0D /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5068B2537822900D86A0D /* Challenges.swift */; };
 		96B506912537877800D86A0D /* MainKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506902537877800D86A0D /* MainKeyLabel.swift */; };
 		96B506962537A0F000D86A0D /* ScaleDegreeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506952537A0F000D86A0D /* ScaleDegreeLabel.swift */; };
 		96B5069B2537A51000D86A0D /* ChordToneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5069A2537A51000D86A0D /* ChordToneLabel.swift */; };
 		96B506A02537BA7F00D86A0D /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5069F2537BA7F00D86A0D /* CustomColors.swift */; };
 		96B506E7253A3BF600D86A0D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506E6253A3BF600D86A0D /* Fonts.swift */; };
+		96B9EDD025476BCB005F7624 /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDCF25476BCB005F7624 /* Sequencer.swift */; };
+		96B9EDD52547854E005F7624 /* KeyLabelRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDD42547854E005F7624 /* KeyLabelRowViewModel.swift */; };
+		96B9EDDA25479C67005F7624 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDD925479C67005F7624 /* Playable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		96430E1B253F7320001FBE1C /* PrimaryKeyBackgroundShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryKeyBackgroundShape.swift; sourceTree = "<group>"; };
 		96430E23253F7A76001FBE1C /* KeyBackgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBackgrounds.swift; sourceTree = "<group>"; };
 		96430E28253F8D5C001FBE1C /* MainGridBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGridBackgroundViewModel.swift; sourceTree = "<group>"; };
+		96430E332547583B001FBE1C /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		96430E3825475949001FBE1C /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
 		965C7A1C253A483C009ED952 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		966006E0252F8ADA0046024E /* KeyPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerViewModel.swift; sourceTree = "<group>"; };
 		966006E82530BA680046024E /* OptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +112,9 @@
 		96B5069A2537A51000D86A0D /* ChordToneLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordToneLabel.swift; sourceTree = "<group>"; };
 		96B5069F2537BA7F00D86A0D /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		96B506E6253A3BF600D86A0D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		96B9EDCF25476BCB005F7624 /* Sequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
+		96B9EDD42547854E005F7624 /* KeyLabelRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyLabelRowViewModel.swift; sourceTree = "<group>"; };
+		96B9EDD925479C67005F7624 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 			children = (
 				960DE55E2523E84A003C724F /* AppDelegate.swift */,
 				960DE5602523E84A003C724F /* SceneDelegate.swift */,
+				96430E32254757C5001FBE1C /* SoundPlayer */,
 				966B866D252CE8230026431C /* Model */,
 				966B866E252CE82C0026431C /* ViewModel */,
 				966B866F252CE8360026431C /* View */,
@@ -219,6 +226,16 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
+		96430E32254757C5001FBE1C /* SoundPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				96430E332547583B001FBE1C /* SoundPlayer.swift */,
+				96B9EDCF25476BCB005F7624 /* Sequencer.swift */,
+				96430E3825475949001FBE1C /* Piano.sf2 */,
+			);
+			path = SoundPlayer;
+			sourceTree = "<group>";
+		};
 		966B866D252CE8230026431C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +265,7 @@
 				960DE5622523E84A003C724F /* ContentView.swift */,
 				960AE52625355F89006993A0 /* InfoDetailView.swift */,
 				960AE5012534EC43006993A0 /* InfoDisplayable.swift */,
+				96B9EDD925479C67005F7624 /* Playable.swift */,
 				966B86AE252D2A020026431C /* Main */,
 				966B86AF252D2A090026431C /* Options */,
 			);
@@ -258,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				966B86C9252D3DAD0026431C /* MainViewModel.swift */,
+				96B9EDD42547854E005F7624 /* KeyLabelRowViewModel.swift */,
 				966006E0252F8ADA0046024E /* KeyPickerViewModel.swift */,
 				96430E28253F8D5C001FBE1C /* MainGridBackgroundViewModel.swift */,
 				966B86A5252D288B0026431C /* OptionsViewModel */,
@@ -417,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96430E3925475949001FBE1C /* Piano.sf2 in Resources */,
 				960DE56B2523E84C003C724F /* LaunchScreen.storyboard in Resources */,
 				960DE5682523E84C003C724F /* Preview Assets.xcassets in Resources */,
 				960DE5652523E84C003C724F /* Assets.xcassets in Resources */,
@@ -445,14 +465,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				966B86BC252D2EBC0026431C /* Model.swift in Sources */,
-				96B5068C2537822900D86A0D /* Challenges.swift in Sources */,
 				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
+				96B9EDD52547854E005F7624 /* KeyLabelRowViewModel.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,
 				966B8686252D11DA0026431C /* Key.swift in Sources */,
 				966006E1252F8ADA0046024E /* KeyPickerViewModel.swift in Sources */,
 				960AE5022534EC43006993A0 /* InfoDisplayable.swift in Sources */,
 				960DE55F2523E84A003C724F /* AppDelegate.swift in Sources */,
+				96B9EDD025476BCB005F7624 /* Sequencer.swift in Sources */,
 				96B506912537877800D86A0D /* MainKeyLabel.swift in Sources */,
 				96430E1C253F7320001FBE1C /* PrimaryKeyBackgroundShape.swift in Sources */,
 				96430E24253F7A76001FBE1C /* KeyBackgrounds.swift in Sources */,
@@ -460,22 +481,21 @@
 				966B86B1252D2A2A0026431C /* OptionsView.swift in Sources */,
 				96B5069B2537A51000D86A0D /* ChordToneLabel.swift in Sources */,
 				96B506A02537BA7F00D86A0D /* CustomColors.swift in Sources */,
+				96B9EDDA25479C67005F7624 /* Playable.swift in Sources */,
 				96B506962537A0F000D86A0D /* ScaleDegreeLabel.swift in Sources */,
 				960AE52725355F89006993A0 /* InfoDetailView.swift in Sources */,
 				968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */,
 				960DE5612523E84A003C724F /* SceneDelegate.swift in Sources */,
 				96430E29253F8D5C001FBE1C /* MainGridBackgroundViewModel.swift in Sources */,
 				96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */,
-				968AF44A253E45F200CAA3C1 /* FontText.swift in Sources */,
 				960DE5632523E84A003C724F /* ContentView.swift in Sources */,
 				966B8679252CEBAC0026431C /* MusicEnums.swift in Sources */,
 				966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */,
-				960DE5932523E878003C724F /* Functionality.swift in Sources */,
 				966B86CA252D3DAD0026431C /* MainViewModel.swift in Sources */,
 				960AE514253500E6006993A0 /* OptionsTitle.swift in Sources */,
 				96B506E7253A3BF600D86A0D /* Fonts.swift in Sources */,
 				968AF454253E89F600CAA3C1 /* KeyLabelRow.swift in Sources */,
-				96B506822536A99B00D86A0D /* HourlyLog.swift in Sources */,
+				96430E342547583B001FBE1C /* SoundPlayer.swift in Sources */,
 				965C7A1D253A483C009ED952 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

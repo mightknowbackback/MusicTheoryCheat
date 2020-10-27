@@ -161,10 +161,8 @@ struct Key : Equatable {
         var result : [UInt8] = []
         
         let scale = self.scale.map {UInt8($0.rawValue) + 48}
-        print("")
-        print(scale)
         for note in scale {
-            if let previousNote = scale.last {
+            if let previousNote = result.last {
                 if note < previousNote {
                     result.append(note + 12)
                 } else {
@@ -177,20 +175,21 @@ struct Key : Equatable {
         if result[0] < self.lowestNote {
             result = result.map {$0 + 12}
         }
-        print(result)
         return result
     }
     func playableChordFor(scaleDegree: Int) -> [UInt8] {
         let full = self.playableScale + self.playableScale.map {$0 + 12}
-        let root = full[scaleDegree]
-        return [root]
-    }
-    func playableNoteForChordTone(_ chordTone: Int, withRoot root: Int) -> UInt8 {
-        let full = self.playableScale + self.playableScale.map {$0 + 12}
-        var result = full[chordTone + root]
-        if full[root] >= self.lowestNote + 12 {
-            result -= 12
+        var result : [UInt8] = []
+        var i = scaleDegree
+        while result.count < 4 {
+            result.append(full[i])
+            i += 2
         }
         return result
+    }
+    func playableNoteForChordTone(_ chordTone: Int, withRoot root: Int) -> [UInt8] {
+        let chord = self.playableChordFor(scaleDegree: root)
+        let result = chord[chordTone]
+        return [result]
     }
 }

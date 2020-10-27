@@ -9,20 +9,23 @@ import Foundation
 
 enum InfoKey : String, CaseIterable {
     
-    // MARK: OptionsView Keys
+    // MARK: OptionsView
     case keySelectionMethod = "Key Selection Method" // 0
     case featuredTonality = "Featured Tonality" // 1
     case symbolType = "Numbering Type" // 2
     case preferredEnharmonicSpelling = "Preferred Enharmonic Spelling" // 3
     case chordType = "Chord Type" // 4
     
-    // MARK: MainView Keys
+    // MARK: MainView
+    // MARK: KeySelector
     // Key Selector
     case keySelector = "Key Selector" // 5
+    // MARK: PrimaryKeyRow
     // Primary Key Row
     case primaryNearKeyFlat = "Near Key (Flats)" // 6
     case primaryKey = "Primary Key" // 7
     case primaryNearKeySharp = "Near Key (Sharps)" // 8
+    // MARK: Grid
     // Scale Degree 1
     case primaryKeyScaleDegreeNumberOne = "Scale Degree Number One" // 9
     case rootForScaleDegreeOne = "Root for Chord Built on Scale Degree One" // 10
@@ -72,11 +75,29 @@ enum InfoKey : String, CaseIterable {
     case fifthForScaleDegreeSeven = "Fifth for Chord Built on Scale Degree Seven" // 48
     case seventhForScaleDegreeSeven = "Seventh for Chord Built on Scale Degree Seven" // 49
     case relativeKeyScaleDegreeNumberSeven = "Relative Key Scale Degree Number Seven" // 50
+    // MARK: RelativeKeyRow
     // Relative Key Row
     case relativeNearKeyFlat = "Near Key (Flats) for Relative Key" // 51
     case relativeKey = "Primary Key for Relative Key" // 52
     case relativeNearKeySharp = "Near Key (Sharps) for Relative Key" // 53
     
+    var rootIndex : Int {
+        if let i = Self.gridKeys.firstIndex(of: self) {
+            return i/6
+        } else {
+            return 0
+        }
+    }
+    var scaleToneIndex : Int {
+        if let i = Self.gridKeys.firstIndex(of: self) {
+            return i&6 - 1
+        } else {
+            return 0
+        }
+    }
+    static var gridKeys : [InfoKey] {
+        return Array(InfoKey.allCases[InfoKey.allCases.firstIndex(of: .primaryKeyScaleDegreeNumberOne)!...InfoKey.allCases.firstIndex(of: .relativeKeyScaleDegreeNumberSeven)!])
+    }
 }
 
 struct Info {

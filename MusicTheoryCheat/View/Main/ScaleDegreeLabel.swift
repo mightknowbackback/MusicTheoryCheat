@@ -7,15 +7,37 @@
 
 import SwiftUI
 
-struct ScaleDegreeNormalView : View {
+struct ScaleDegreeNormalLabel : View {
     let text : String
     var body: some View {
         Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
     }
 }
+struct ScaleDegreePlayable : View, Playable {
+    
+    @EnvironmentObject var viewModel: ViewModel
+    let text: String
+    let infoKey : InfoKey
+    var notes: [UInt8] {
+        let index = InfoKey.allCases.firstIndex(of: self.infoKey)!
+        let base = index - 9
+        let rootIndex = base/6
+        var notes = self.viewModel.model.currentKey.playableChordFor(scaleDegree: rootIndex)
+        let seventh = notes.popLast()!
+        return self.viewModel.model.showSevenths ? notes + [seventh] : notes
+    }
+    func play() {
+        self.viewModel.model.sequencer.playChord(withNotes: self.notes)
+    }
+    var body: some View {
+        Button(action: self.play) {
+            ScaleDegreeNormalLabel(text: self.text)
+        }
+    }
+}
 struct ScaleDegreeQuestionMark : View {
     var body: some View {
-        ScaleDegreeNormalView(text: "?")
+        ScaleDegreeNormalLabel(text: "?")
     }
 }
 struct ScaleDegreeInfoLabel : InfoRequestDisplay {
@@ -27,6 +49,8 @@ struct ScaleDegreeInfoLabel : InfoRequestDisplay {
 }
 struct ScaleDegreeLabel: InfoDisplayable {
     
+    
+    
     var infoKey: InfoKey
     
     @EnvironmentObject var viewModel : ViewModel
@@ -34,12 +58,13 @@ struct ScaleDegreeLabel: InfoDisplayable {
     var isShowingQuestionMark: Binding<Bool> {
         self.$viewModel.showInfoClickables
     }
-    var normalView : ScaleDegreeNormalView
+    var normalView : ScaleDegreePlayable
     var infoRequestView : ScaleDegreeInfoLabel
     
     init(text: String, infoKey: InfoKey) {
         self.infoKey = infoKey
-        self.normalView = ScaleDegreeNormalView(text: text)
+        self.normalView =
+            ScaleDegreePlayable(text: text, infoKey: infoKey)
         self.infoRequestView = ScaleDegreeInfoLabel(infoKey: infoKey)
     }
 }
@@ -49,7 +74,7 @@ struct ScaleDegreeLabel_Previews: PreviewProvider {
     static let viewModel = ViewModel()
     static let infoKey = InfoKey.allCases[9]
     static var previews: some View {
-        ScaleDegreeNormalView(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
+        ScaleDegreeNormalLabel(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
         ScaleDegreeQuestionMark().previewLayout(PreviewLayout.sizeThatFits)
         ScaleDegreeLabel(text: Self.text, infoKey: Self.infoKey).environmentObject(Self.viewModel)
         MainView().environmentObject(Self.viewModel)
