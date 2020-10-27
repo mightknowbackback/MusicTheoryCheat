@@ -45,9 +45,42 @@ struct NearKeyInfoLabel : InfoRequestDisplay {
     var questionMarkView = NearKeyQuestionMark()
     
 }
+struct NearKeyPlayable : View, Playable {
+    @EnvironmentObject var viewModel : ViewModel
+    
+    let text : String
+    let infoKey: InfoKey
+    
+    var notes: [UInt8] {
+        var scale : [UInt8] = []
+        switch self.infoKey {
+        case .primaryNearKeyFlat:
+            scale = self.viewModel.model.currentKey.nearKeyFlat.playableScale
+        case .primaryNearKeySharp:
+            scale = self.viewModel.model.currentKey.nearKeySharp.playableScale
+        case .relativeNearKeyFlat:
+            scale = self.viewModel.model.currentKey.relativeKey.nearKeyFlat.playableScale
+        case .relativeNearKeySharp:
+            scale = self.viewModel.model.currentKey.relativeKey.nearKeySharp.playableScale
+        default:
+            return []
+        }
+        let first = scale[0] + 12
+        scale.append(first)
+        return scale
+    }
+    func play() {
+        self.viewModel.model.sequencer.playMelody(withNotes: self.notes)
+    }
+    var body: some View {
+        Button(action: self.play) {
+            NearKeyNormalLabel(text: self.text)
+        }
+    }
+    
+}
 
 struct NearKeyLabel: InfoDisplayable {
-    
     
     @EnvironmentObject var viewModel : ViewModel
     
@@ -56,11 +89,11 @@ struct NearKeyLabel: InfoDisplayable {
     }
     
     var infoKey: InfoKey
-    var normalView: NearKeyNormalLabel
+    var normalView: NearKeyPlayable
     var infoRequestView: NearKeyInfoLabel
     
     init(text: String, infoKey: InfoKey) {
-        self.normalView = NormalView(text: text)
+        self.normalView = NearKeyPlayable(text: text, infoKey: infoKey)
         self.infoKey = infoKey
         self.infoRequestView = InfoRequestView(infoKey: infoKey)
     }

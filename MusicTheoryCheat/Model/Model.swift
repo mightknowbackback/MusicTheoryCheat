@@ -107,7 +107,7 @@ struct Model  {
 //    }
     
     init() {
-        self.sequencer = Sequencer(soundPlayer: SoundFontPlayer()!)
+        self.sequencer = Sequencer.shared
         self.load()
     }
 }
