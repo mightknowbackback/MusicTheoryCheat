@@ -90,7 +90,7 @@ enum InfoKey : String, CaseIterable {
     }
     var scaleToneIndex : Int {
         if let i = Self.gridKeys.firstIndex(of: self) {
-            return i&6 - 1
+            return i%6 - 1
         } else {
             return 0
         }

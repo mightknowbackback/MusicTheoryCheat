@@ -7,10 +7,30 @@
 
 import SwiftUI
 
-struct ChordToneNormalView : View {
+struct ChordToneNormalLabel : View {
     let text : String
     var body: some View {
         Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
+    }
+}
+struct ChordTonePlayable : View, Playable {
+    
+    @EnvironmentObject var viewModel : ViewModel
+    
+    var text : String
+    var infoKey: InfoKey
+    
+    var notes: [UInt8] {
+        return self.viewModel.model.currentKey.playableNoteForChordTone(self.infoKey.scaleToneIndex, withRoot: self.infoKey.rootIndex)
+    }
+    
+    func play() {
+        self.viewModel.model.sequencer.playChord(withNotes: self.notes)
+    }
+    var body: some View {
+        Button(action: self.play) {
+            ChordToneNormalLabel(text: self.text)
+        }
     }
 }
 struct ChordToneQuestionMark : View {
@@ -27,19 +47,19 @@ struct ChordToneInfoLabel : InfoRequestDisplay {
 }
 struct ChordToneLabel: InfoDisplayable {
     
-    var infoKey: InfoKey
-    
     @EnvironmentObject var viewModel : ViewModel
+    
+    var infoKey: InfoKey
     
     var isShowingQuestionMark: Binding<Bool> {
         self.$viewModel.showInfoClickables
     }
-    var normalView : ChordToneNormalView
+    var normalView : ChordTonePlayable
     var infoRequestView : ChordToneInfoLabel
     
     init(text: String, infoKey: InfoKey) {
         self.infoKey = infoKey
-        self.normalView = ChordToneNormalView(text: text)
+        self.normalView = ChordTonePlayable(text: text, infoKey: infoKey)
         self.infoRequestView = ChordToneInfoLabel(infoKey: infoKey)
     }
 }
@@ -49,7 +69,7 @@ struct ChordToneLabel_Previews: PreviewProvider {
     static let viewModel = ViewModel()
     static let infoKey = InfoKey.allCases[9]
     static var previews: some View {
-        ChordToneNormalView(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
+        ChordToneNormalLabel(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
         ChordToneQuestionMark().previewLayout(PreviewLayout.sizeThatFits)
         HStack {
             ForEach(0..<4) {_ in
