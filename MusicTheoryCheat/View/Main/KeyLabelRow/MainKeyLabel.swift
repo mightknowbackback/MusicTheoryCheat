@@ -53,6 +53,37 @@ struct MainKeyInfoLabel : InfoRequestDisplay {
     var questionMarkView = MainKeyQuestionMark()
     
 }
+struct MainKeyPlayable : View, Playable {
+    
+    @EnvironmentObject var viewModel: ViewModel
+    var notes: [UInt8] {
+        var scale : [UInt8] = []
+        switch self.infoKey {
+        case .primaryKey:
+            scale = self.viewModel.model.currentKey.playableScale
+        case .relativeKey:
+            scale = self.viewModel.model.currentKey.relativeKey.playableScale
+        default:
+            return scale
+        }
+        let octave = scale[0] + 12
+        scale.append(octave)
+        return scale
+    }
+    
+    func play() {
+        self.viewModel.model.sequencer.playMelody(withNotes: self.notes)
+    }
+    
+    var text : String
+    var infoKey : InfoKey
+    
+    var body: some View {
+        Button(action: self.play) {
+            MainKeyNormalLabel(text: self.text)
+        }
+    }
+}
 struct MainKeyLabel: InfoDisplayable {
     
     @EnvironmentObject var viewModel : ViewModel
@@ -62,11 +93,11 @@ struct MainKeyLabel: InfoDisplayable {
     }
     
     var infoKey: InfoKey
-    var normalView: MainKeyNormalLabel
+    var normalView: MainKeyPlayable
     var infoRequestView: MainKeyInfoLabel
     
     init(text: String, infoKey: InfoKey) {
-        self.normalView = NormalView(text: text)
+        self.normalView = MainKeyPlayable(text: text, infoKey: infoKey)
         self.infoKey = infoKey
         self.infoRequestView = InfoRequestView(infoKey: infoKey)
     }

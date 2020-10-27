@@ -45,6 +45,7 @@
 		96B506E7253A3BF600D86A0D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B506E6253A3BF600D86A0D /* Fonts.swift */; };
 		96B9EDD025476BCB005F7624 /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDCF25476BCB005F7624 /* Sequencer.swift */; };
 		96B9EDDA25479C67005F7624 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDD925479C67005F7624 /* Playable.swift */; };
+		96B9EDE82547D57C005F7624 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9EDE72547D57C005F7624 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		96B506E6253A3BF600D86A0D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		96B9EDCF25476BCB005F7624 /* Sequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
 		96B9EDD925479C67005F7624 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
+		96B9EDE72547D57C005F7624 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				96B506812536A99B00D86A0D /* HourlyLog.swift */,
 				96B5068B2537822900D86A0D /* Challenges.swift */,
 				968AF449253E45F200CAA3C1 /* FontText.swift */,
+				96B9EDE72547D57C005F7624 /* ToDo.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				966B86BC252D2EBC0026431C /* Model.swift in Sources */,
 				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
+				96B9EDE82547D57C005F7624 /* ToDo.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,
 				966B8686252D11DA0026431C /* Key.swift in Sources */,
 				966006E1252F8ADA0046024E /* KeyPickerViewModel.swift in Sources */,
