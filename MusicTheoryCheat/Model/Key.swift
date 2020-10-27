@@ -159,7 +159,6 @@ struct Key : Equatable {
     private let lowestNote : UInt8 = 53
     var playableScale : [UInt8] {
         var result : [UInt8] = []
-        
         let scale = self.scale.map {UInt8($0.rawValue) + 48}
         for note in scale {
             if let previousNote = result.last {

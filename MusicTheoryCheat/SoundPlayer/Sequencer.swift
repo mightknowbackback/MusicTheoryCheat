@@ -17,7 +17,6 @@ class Sequencer {
     private var melodyNotes : [UInt8] = []
     private let melodyNoteDuration = 0.25
     func playMelody(withNotes notes: [UInt8]) {
-        print(notes)
         self.endSequence()
         self.melodyNotes = notes
         self.soundPlayer.start(note: melodyNotes[0])
