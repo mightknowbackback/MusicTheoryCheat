@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct ChordToneNormalLabel : View {
-    let text : String
+    let noteName : String
+    let accidental : String?
     var body: some View {
-        Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
+        if let a = accidental {
+            HStack(spacing: 0) {
+                Text(self.noteName).font(CustomFonts.nearKey)
+                    .foregroundColor(.white)
+                    .frame(minWidth: 0)
+                    .shadow(radius: 6)
+                Text(a).font(CustomFonts.nearAccidental)
+                    .foregroundColor(.white)
+                    .frame(minWidth: 0)
+                        .offset(y: -4)
+                    .shadow(radius: 2)
+            }.frame(minWidth: 0)
+        } else {
+            Text(self.noteName).font(CustomFonts.nearKey)
+                .foregroundColor(.white)
+                .shadow(radius: 6)
+        }
+    }
+    init(text: String) {
+        var t = text
+        self.noteName = String(t.removeFirst())
+        if let accidental = t.last {
+            self.accidental = String(accidental)
+        } else {
+            self.accidental = nil
+        }
     }
 }
 struct ChordTonePlayable : View, Playable {
@@ -69,8 +95,9 @@ struct ChordToneLabel_Previews: PreviewProvider {
     static let viewModel = ViewModel()
     static let infoKey = InfoKey.allCases[9]
     static var previews: some View {
-        ChordToneNormalLabel(text: Self.text).previewLayout(PreviewLayout.sizeThatFits)
-        ChordToneQuestionMark().previewLayout(PreviewLayout.sizeThatFits)
+        
+        ChordToneNormalLabel(text: Self.text).previewLayout(PreviewLayout.sizeThatFits).background(CustomColors.primaryDarkSwift)
+        ChordToneQuestionMark().previewLayout(PreviewLayout.sizeThatFits).background(CustomColors.primaryDarkSwift)
         HStack {
             ForEach(0..<4) {_ in
                 ChordToneLabel(text: Self.text, infoKey: Self.infoKey).frame(maxWidth: .infinity).environmentObject(Self.viewModel)

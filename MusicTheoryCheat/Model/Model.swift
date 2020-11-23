@@ -53,7 +53,7 @@ struct Model  {
         KeySpelling.all[self.preferredSpellingIndex]
     }
     var showSevenths : Bool = false
-    var currentKeyIndex : Int = 0
+    var currentKeyIndex : Int = 10
     var currentKey : Key {
         var key = Key(keyCenter: PitchClass.pitchClassBy(noteNumber: self.currentKeyIndex), tonality: self.featuredTonality)
         if self.preferredSpelling == .sharps {

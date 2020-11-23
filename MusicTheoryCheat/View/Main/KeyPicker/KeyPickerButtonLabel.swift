@@ -20,9 +20,20 @@ struct KeyPickerButtonLabel: View {
     var body: some View {
         ZStack {
             self.color.clipShape(Circle()).padding(self.padding)
-            Text(self.letter).font(self.mainFont).shadow(radius: 4).padding(8)
-            if let acc = self.accidental {
-                Text(acc).font(self.symbolFont).shadow(radius: 4).offset(x: 6, y: -4)
+            
+            if let a = self.accidental {
+                HStack(spacing: 0) {
+                    Text(self.letter).font(self.mainFont)
+                        .shadow(radius: 4)
+                    Text(a).font(self.symbolFont)
+                        .shadow(radius: 4)
+                        .offset(y: -2)
+                }.offset(x: 2)
+                
+            } else {
+                Text(self.letter).font(self.mainFont)
+                    .shadow(radius: 4)
+                    .padding(8)
             }
         }.foregroundColor(.white)
     }

@@ -22,9 +22,11 @@ let minorRomanNumeralsOffset : [String] = Array(minorRomanNumerals[2...6]) + Arr
 let majorNashvilleNumbers : [String] = ["1", "2", "3", "4", "5", "6", "7"]
 let minorNashvilleNumbers : [String] = Array(majorNashvilleNumbers[5...6]) + Array(majorNashvilleNumbers[0...4])
 
+
 struct Dimensions {
     static let keyLabel : CGFloat = 60
     static let keyLabelPadding : CGFloat = 12
     static let gridShapePadding : CGFloat = 8
+    static let matrixSidePadding : CGFloat = 4
 }
 

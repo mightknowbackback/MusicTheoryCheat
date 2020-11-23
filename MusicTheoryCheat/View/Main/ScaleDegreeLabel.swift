@@ -10,7 +10,9 @@ import SwiftUI
 struct ScaleDegreeNormalLabel : View {
     let text : String
     var body: some View {
-        Text(self.text).font(CustomFonts.nearKey).foregroundColor(.white)
+        Text(self.text).font(CustomFonts.nearKey)
+            .foregroundColor(.white)
+            .shadow(radius: 6)
     }
 }
 struct ScaleDegreePlayable : View, Playable {

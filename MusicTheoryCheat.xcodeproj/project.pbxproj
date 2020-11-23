@@ -35,6 +35,7 @@
 		966B86D7252D55F70026431C /* KeyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86D6252D55F70026431C /* KeyPickerView.swift */; };
 		966B86E4252D5D390026431C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B8692252D1BB20026431C /* ViewModel.swift */; };
 		966B86EC252D73260026431C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B86EB252D73260026431C /* MainView.swift */; };
+		967FE87F256C69D600342F1E /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FE87E256C69D600342F1E /* AppBackground.swift */; };
 		968AF445253E43E600CAA3C1 /* KeyPickerButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */; };
 		968AF454253E89F600CAA3C1 /* KeyLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */; };
 		96B50687253770F600D86A0D /* NearKeyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B50686253770F600D86A0D /* NearKeyLabel.swift */; };
@@ -101,6 +102,7 @@
 		966B86C9252D3DAD0026431C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		966B86D6252D55F70026431C /* KeyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerView.swift; sourceTree = "<group>"; };
 		966B86EB252D73260026431C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		967FE87E256C69D600342F1E /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		968AF444253E43E600CAA3C1 /* KeyPickerButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPickerButtonLabel.swift; sourceTree = "<group>"; };
 		968AF449253E45F200CAA3C1 /* FontText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontText.swift; sourceTree = "<group>"; };
 		968AF453253E89F600CAA3C1 /* KeyLabelRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyLabelRow.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		96430E32254757C5001FBE1C /* SoundPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				96B9EDD925479C67005F7624 /* Playable.swift */,
 				96430E332547583B001FBE1C /* SoundPlayer.swift */,
 				96B9EDCF25476BCB005F7624 /* Sequencer.swift */,
 				96430E3825475949001FBE1C /* Piano.sf2 */,
@@ -264,9 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				960DE5622523E84A003C724F /* ContentView.swift */,
+				967FE87E256C69D600342F1E /* AppBackground.swift */,
 				960AE52625355F89006993A0 /* InfoDetailView.swift */,
 				960AE5012534EC43006993A0 /* InfoDisplayable.swift */,
-				96B9EDD925479C67005F7624 /* Playable.swift */,
 				966B86AE252D2A020026431C /* Main */,
 				966B86AF252D2A090026431C /* Options */,
 			);
@@ -467,6 +470,7 @@
 				966B86BC252D2EBC0026431C /* Model.swift in Sources */,
 				960AE4FD2534DD9D006993A0 /* Info.swift in Sources */,
 				966B86EC252D73260026431C /* MainView.swift in Sources */,
+				967FE87F256C69D600342F1E /* AppBackground.swift in Sources */,
 				96B9EDE82547D57C005F7624 /* ToDo.swift in Sources */,
 				966B86E4252D5D390026431C /* ViewModel.swift in Sources */,
 				966B8686252D11DA0026431C /* Key.swift in Sources */,

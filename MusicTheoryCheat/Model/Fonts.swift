@@ -12,7 +12,7 @@ struct CustomFonts {
     
     // MARK: Key Picker
     static let keyPickerLetter : Font = .custom(fontStrings[123], size: 14)
-    static let keyPickersymbol : Font = .custom(fontStrings[18], size: 12)
+    static let keyPickersymbol : Font = .custom(fontStrings[18], size: 14)
     static let keyPickerAcidentalLabel : Font = .custom(fontStrings[123], size: 14)
     
     // MARK: Key Header/Footer Label

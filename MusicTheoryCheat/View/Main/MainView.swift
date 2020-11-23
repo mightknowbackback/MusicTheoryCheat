@@ -18,7 +18,7 @@ struct MainView: View {
                 // MARK: Key Picker
                 KeyPickerView()
                 ZStack {
-                    KeyBackgrounds()
+                    KeyBackgrounds().padding([.leading, .trailing], Dimensions.matrixSidePadding)
                     VStack(spacing: 0) {
                         // MARK: Main Key Row (Chart Header)
                         KeyLabelRow(textForFlatKey: self.viewModel.primaryNearKeyFlatLabelString, main: self.viewModel.primaryKeyLabelString, sharp: self.viewModel.primaryNearKeySharpLabelString).padding([.top, .bottom], Dimensions.keyLabelPadding)
@@ -48,9 +48,9 @@ struct MainView: View {
                         }.padding([.top, .bottom], Dimensions.gridShapePadding)
                         // MARK: Relative Key Row (Chart Footer)
                         KeyLabelRow(textForFlatKey: self.viewModel.relativeNearKeyFlatLabelString, main: self.viewModel.relativeKeyLabelString, sharp: self.viewModel.relativeNearKeySharpLabelString, isMain: false).padding([.top, .bottom], Dimensions.keyLabelPadding)
-                    }
-                }.layoutPriority(1)
-                
+                    }.padding([.leading, .trailing], Dimensions.matrixSidePadding)
+                }
+                .layoutPriority(1)
             }
             .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
             .navigationBarItems(
@@ -61,7 +61,7 @@ struct MainView: View {
                     Text("Options")
             })
             .navigationTitle(appName.uppercased())
-            
+            .background(AppBackground())
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

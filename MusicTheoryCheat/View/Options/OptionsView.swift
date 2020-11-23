@@ -59,6 +59,7 @@ struct OptionsView: View {
                 // TODO: ADD 'SHOW SEVENTH CHORDS'
             }
         }
+        .background(AppBackground())
         .showInfoView(self.$viewModel.infoViewIsShowing, withInfoKey: self.viewModel.infoKey)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
@@ -76,6 +77,10 @@ struct OptionsView: View {
             self.viewModel.showInfoClickables = false
         }
     }
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
 }
 
 struct OptionsView_Previews: PreviewProvider {
